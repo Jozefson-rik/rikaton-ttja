@@ -14,8 +14,7 @@ toc_sticky: true
 |---|---|
 | Hindaja | TTJA gäng |
 | Hindamise kuupäev | 26.08.2026 |
-| Järelkontrolli kuupäev | 27.06.2026 |
-| Tagasiside kuupäev (email@ttja.ee}| 26.08.2026 |
+| Tagasiside kuupäev (email@ttja.ee}| 27.08.2026 |
 
 > Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
