@@ -55,12 +55,16 @@ toc_sticky: true
 </style>
 
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const headings = Array.from(document.querySelectorAll("main h2, .main-content h2"));
+	const setupAuditFindingToggles = () => {
+		const headings = Array.from(document.querySelectorAll(".markdown-body h2, main h2, .main-content h2"));
 		const issueHeadingPattern = /^(WCAG|EN 301 549)/;
 
 		headings.forEach((heading, index) => {
-			const title = heading.textContent.trim();
+			if (heading.querySelector(".audit-finding-toggle")) {
+				return;
+			}
+
+			const title = heading.textContent.replace(/Anchor\s*$/, "").trim();
 
 			if (!issueHeadingPattern.test(title)) {
 				return;
@@ -105,7 +109,13 @@ toc_sticky: true
 				icon.textContent = expanded ? "+" : "−";
 			});
 		});
-	});
+	};
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", setupAuditFindingToggles);
+	} else {
+		setupAuditFindingToggles();
+	}
 </script>
 
 ---
