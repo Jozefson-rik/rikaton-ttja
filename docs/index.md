@@ -154,11 +154,11 @@ toc_sticky: true
 
 # Sissejuhatus
 
-Käesolev aruanne annab juhtkonnale koondülevaate veebilehe [test.ee](https://www.test.ee/) digiligipääsetavuse hetkeseisust ja peamistest mittevastavustest. Põhjaliku auditi käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel ning tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
+Käesolev aruanne annab koondülevaate veebilehe test.ee digiligipääsetavuse hetkeseisust ja peamistest mittevastavustest. Põhjaliku auditi käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel ning tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
 Kõige olulisemad puudused puudutavad klaviatuuriga navigeerimist, ekraanilugeja tuge, fookuse nähtavust, kasutajaliidese olekuteavet ning teksti ja komponentide kontrastsust. Need probleemid võivad takistada veebilehe iseseisvat kasutamist pimedatel ja vaegnägijatel, liikumispuudega kasutajatel ning inimestel, kes kasutavad suurendust, klaviatuuri või kõrgkontrastset kuvarežiimi.
 
-Parandustöödes tuleks esmalt keskenduda kriitilistele takistustele, mis mõjutavad põhifunktsioonide kasutamist, ning seejärel kõrge prioriteediga visuaalsetele ja kasutajaliidese puudustele. Iga leiu juures on toodud standardiviited, mõju, vastutaja, mõjutatud alamlehed ja tehniline viide, et aruannet saaks kasutada praktilise parandusplaani alusena.
+Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõjutavad põhifunktsioonide kasutamist, ning seejärel kõrge prioriteediga visuaalsetele ja kasutajaliidese puudustele. Iga leiu juures on toodud standardiviited, mõju, vastutaja, mõjutatud alamlehed ja tehniline viide, et aruannet saaks kasutada praktilise parandusplaani alusena.
 
 ---
 
