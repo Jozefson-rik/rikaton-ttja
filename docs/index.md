@@ -8,6 +8,13 @@ toc_sticky: true
 ---
 
 # Digiligipääsetavuse kontrolli aruanne: [test.ee](https://www.test.ee/)
+{: .no_toc }
+
+| Väli | Väärtus |
+|---|---|
+| Hindaja | TTJA gäng |
+| Hindamise kuupäev | 26.08.2026 |
+| Järelkontrolli kuupäev | 27.06.2026 |
 
 > Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
@@ -138,9 +145,7 @@ toc_sticky: true
 
 ---
 
-# Kokkuvõte
-
-## Aruande lähteandmed
+# Aruande lähteandmed
 
 | Väli | Väärtus |
 |--------|--------|
@@ -150,7 +155,7 @@ toc_sticky: true
 | Testitud alamlehti | 8 |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
 
-## Üldtulemus
+# Üldtulemus
 
 Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime.
 
@@ -162,7 +167,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.1.1 Keyboard |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.1.1 Keyboard |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#keyboard> |
 | Mõju kasutajale | Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. |
 | Vastutaja | ✅ Arendaja |
@@ -203,7 +208,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.4.1 Bypass Blocks |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.1 Bypass Blocks |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks> |
 | Mõju kasutajale | Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. |
 | Vastutaja | ✅ Arendaja |
@@ -236,7 +241,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.1.3.1 Info and Relationships |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.3.1 Info and Relationships |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships> |
 | Mõju kasutajale | Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. |
 | Vastutaja | ✅ Arendaja |
@@ -279,7 +284,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.4.1.2 Name, Role, Value |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.4.1.2 Name, Role, Value |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#name-role-value> |
 | Mõju kasutajale | Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. |
 | Vastutaja | ✅ Arendaja |
@@ -320,7 +325,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.1.4.3 Contrast (Minimum) |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.4.3 Contrast (Minimum) |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -363,7 +368,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.1.4.11 Non-text Contrast |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.4.11 Non-text Contrast |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -401,7 +406,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.4.7 Focus Visible |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.7 Focus Visible |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-visible> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -442,7 +447,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.1.1.1 Non-text Content |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.1.1 Non-text Content |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-content> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
@@ -480,7 +485,7 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.3.3.1 Error Identification |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.1 Error Identification |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-identification> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -506,7 +511,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.3.3.2 Labels or Instructions |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.2 Labels or Instructions |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
@@ -534,7 +539,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.3.3.3 Error Suggestion |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.3 Error Suggestion |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -560,7 +565,7 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.3.1.1 Language of Page |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.1.1 Language of Page |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#language-of-page> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Sisutoimetaja |
@@ -593,7 +598,7 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.2.2 Pause, Stop, Hide |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.2.2 Pause, Stop, Hide |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -619,7 +624,7 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.4.2 Page Titled |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.2 Page Titled |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#page-titled> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -645,7 +650,7 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.1.3.5 Identify Input Purpose |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.3.5 Identify Input Purpose |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -671,7 +676,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.4.1.3 Status Messages |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.4.1.3 Status Messages |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#status-messages> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -706,7 +711,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §9.2.4.3 Focus Order |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.3 Focus Order |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-order> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -734,7 +739,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 | Väli | Väärtus |
 |---|---|
-| EN 310 549 viide | §11.7 User Preferences |
+| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §11.7 User Preferences |
 | WCAG viide | Ei kohaldu. |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
