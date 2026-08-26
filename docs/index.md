@@ -7,10 +7,10 @@ has_toc: true
 toc_sticky: true
 ---
 
-# Digiligipääsetavuse kontrolli aruanne: [test.ee](https://www.test.ee/)
+# veebilehe [test.ee](https://www.test.ee/) 2026 a. põhjaliku digiligipääsetavuse seire aruanne
 {: .no_toc }
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise läbiviija | Toomas ja pojad OÜ|
 | Hindamise kuupäev | 26.08.2026 |
@@ -147,7 +147,7 @@ toc_sticky: true
 
 # Aruande lähteandmed
 
-| Väli | Väärtus |
+
 |--------|--------|
 | Hindamise viis | käsitsi |
 | Veebileht | test.ee |
@@ -172,7 +172,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 2.1.1 Keyboard
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.2.1.1 Keyboard |
@@ -204,7 +204,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 2.4.1 Bypass Blocks
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.2.4.1 Bypass Blocks |
@@ -233,7 +233,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 1.3.1 Info and Relationships
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.1.3.1 Info and Relationships |
@@ -265,7 +265,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 4.1.2 Name, Role, Value
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.4.1.2 Name, Role, Value |
@@ -299,7 +299,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 1.4.3 Contrast (Minimum)
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.1.4.3 Contrast (Minimum) |
@@ -333,7 +333,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 1.4.11 Non-text Contrast
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.1.4.11 Non-text Contrast |
@@ -365,7 +365,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 2.4.7 Focus Visible
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.2.4.7 Focus Visible |
@@ -398,7 +398,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 1.1.1 Non-text Content
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.1.1.1 Non-text Content |
@@ -429,7 +429,7 @@ Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud
 
 ## WCAG 3.3.1 Error Identification
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.3.3.1 Error Identification |
@@ -451,7 +451,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ## WCAG 3.3.2 Labels or Instructions
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.3.3.2 Labels or Instructions |
@@ -475,7 +475,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ## WCAG 3.3.3 Error Suggestion
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.3.3.3 Error Suggestion |
@@ -497,7 +497,7 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 ## WCAG 3.1.1 Language of Page
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.3.1.1 Language of Page |
@@ -526,7 +526,7 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 ## WCAG 2.2.2 Pause, Stop, Hide
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.2.2.2 Pause, Stop, Hide |
@@ -548,7 +548,7 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 ## WCAG 2.4.2 Page Titled
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.2.4.2 Page Titled |
@@ -570,7 +570,7 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 ## WCAG 1.3.5 Identify Input Purpose
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.1.3.5 Identify Input Purpose |
@@ -592,7 +592,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ## WCAG 4.1.3 Status Messages
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §9.4.1.3 Status Messages |
@@ -621,7 +621,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ## WCAG 2.4.3 Focus Order
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | automaatne |
 | [EN 310 549 viide] | §9.2.4.3 Focus Order |
@@ -641,7 +641,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 ## EN 301 549 §11.7 User Preferences
 
-| Väli | Väärtus |
+
 |---|---|
 | Hindamise viis | käsitsi |
 | [EN 310 549 viide] | §11.7 User Preferences |
