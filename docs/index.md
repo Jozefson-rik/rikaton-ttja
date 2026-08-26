@@ -154,13 +154,11 @@ toc_sticky: true
 
 # Sissejuhatus
 
-Käesolev aruanne annab juhtkonnale koondülevaate veebilehe [test.ee](https://www.test.ee/) digiligipääsetavuse hetkeseisust, peamistest mittevastavustest ja nende võimalikust mõjust kasutajatele. Hindamine viidi läbi põhjaliku auditina, mille käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel. Auditi tulemusel tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
+Käesolev aruanne annab juhtkonnale koondülevaate veebilehe [test.ee](https://www.test.ee/) digiligipääsetavuse hetkeseisust ja peamistest mittevastavustest. Põhjaliku auditi käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel ning tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
-Leitud puudused ei ole ainult tehnilised detailid, vaid mõjutavad otseselt seda, kas erinevate vajadustega inimesed saavad veebilehte iseseisvalt kasutada. Kõige suurema mõjuga probleemid puudutavad klaviatuuriga navigeerimist, ekraanilugeja tuge, fookuse nähtavust, kasutajaliidese komponentide olekuteavet ning teksti ja kasutajaliidese elementide kontrastsust. Need puudused võivad takistada veebilehe kasutamist näiteks pimedatel ja vaegnägijatel, liikumispuudega kasutajatel, klaviatuuriga navigeerijatel ning inimestel, kes kasutavad suurendust või kõrgkontrastset kuvarežiimi.
+Kõige olulisemad puudused puudutavad klaviatuuriga navigeerimist, ekraanilugeja tuge, fookuse nähtavust, kasutajaliidese olekuteavet ning teksti ja komponentide kontrastsust. Need probleemid võivad takistada veebilehe iseseisvat kasutamist pimedatel ja vaegnägijatel, liikumispuudega kasutajatel ning inimestel, kes kasutavad suurendust, klaviatuuri või kõrgkontrastset kuvarežiimi.
 
-Juhtimise seisukohast tähendab see, et ligipääsetavuse parandamine vajab selget prioriseerimist ja vastutust. Esmalt tuleks lahendada kriitilised probleemid, mis takistavad teenuse põhifunktsioonide kasutamist, sealhulgas klaviatuurikasutuse, semantilise struktuuri, ARIA olekute ja põhisisu juurde liikumisega seotud puudused. Seejärel tuleks tegeleda kõrge prioriteediga visuaalsete ja kasutajaliidese probleemidega, nagu kontrastsus, fookuse nähtavus ja alternatiivtekstid.
-
-Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud seotud standardiviited, mõju kasutajale, vastutaja, mõjutatud alamlehed ning tehniline viide või CSS-valija, mille abil saab arendustööde käigus probleemi kiiremini üles leida. Soovitatud tegevuskava jagab parandused 30, 90 ja 180 päeva vaatesse, et kriitilised takistused saaksid lahendatud enne väiksema mõjuga puudusi.
+Parandustöödes tuleks esmalt keskenduda kriitilistele takistustele, mis mõjutavad põhifunktsioonide kasutamist, ning seejärel kõrge prioriteediga visuaalsetele ja kasutajaliidese puudustele. Iga leiu juures on toodud standardiviited, mõju, vastutaja, mõjutatud alamlehed ja tehniline viide, et aruannet saaks kasutada praktilise parandusplaani alusena.
 
 ---
 
