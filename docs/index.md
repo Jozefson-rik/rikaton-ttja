@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Digiligipääsetavuse kontrolli aruanne"
+title: "Digiligipääsetavuse kontrolli aruanne: test.ee"
 permalink: /
 nav_order: 1
 has_toc: true
 toc_sticky: true
 ---
 
-# Digiligipääsetavuse kontrolli aruanne
+# Digiligipääsetavuse kontrolli aruanne: [test.ee](https://www.test.ee/)
 
 > Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
@@ -138,9 +138,9 @@ toc_sticky: true
 
 ---
 
-# Juhtkokkuvõte
+# Kokkuvõte
 
-## Kontrolli andmed
+## Aruande lähteandmed
 
 | Väli | Väärtus |
 |--------|--------|
@@ -154,31 +154,27 @@ toc_sticky: true
 
 Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime.
 
-## Kõige olulisemad probleemid
-
-1. Klaviatuuriga navigeerimine ei ole täielikult kasutatav.
-2. Ekraanilugejaga kasutamisel puuduvad oluliste elementide kirjeldused ja olekuteave.
-3. Mitmete komponentide kontrastsus ei vasta WCAG nõuetele.
-4. Puudub võimalus liikuda otse põhisisu juurde.
-5. Vormid ei anna kasutajatele piisavaid juhiseid ja parandamissoovitusi.
-
----
-
-# Ligipääsetavuse teatise hinnang
-
-Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on kontrollida, kas kõik allpool kirjeldatud puudused on ligipääsetavuse teatises korrektselt kajastatud.
-
 ---
 
 # Kriitilised probleemid
 
 ## WCAG 2.1.1 Keyboard
 
+**EN 310 549 viide:**  
+§9.2.1.1 Keyboard
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#keyboard>
 
-**EN 301 549 viide:**  
-§9.2.1.1 Keyboard
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Klaviatuuri fookus ei liigu sisselogimise aknasse, vaid jääb taustal liikuma. Otsingusoovitused avanevad automaatselt ning neid ei ole võimalik vahele jätta. Jaluses jäetakse partnerite logod vahele.
+- **Odavad kaubad:** Lisaks sisselogimise akna ja otsingusoovituste probleemile ei liigu fookus sorteerimise valikule.
+- **Ostukorv:** Klaviatuuri fookus jääb sisselogimise akna avamisel taustale liikuma ning otsingusoovitusi ei saa vahele jätta.
+- **Ostu vormistamine:** Lisaks üldistele klaviatuuriprobleemidele ei liigu fookus aja valiku aknale ning aega ei saa sisestusväljale trükkida.
+- **Kontaktid:** Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
+- **Kinkekaart:** Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -214,11 +210,16 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 
 ## WCAG 2.4.1 Bypass Blocks
 
+**EN 310 549 viide:**  
+§9.2.4.1 Bypass Blocks
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks>
 
-**EN 301 549 viide:**  
-§9.2.4.1 Bypass Blocks
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Lehe päist ei ole võimalik vahele jätta.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -251,11 +252,23 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 
 ## WCAG 1.3.1 Info and Relationships
 
+**EN 310 549 viide:**  
+§9.1.3.1 Info and Relationships
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships>
 
-**EN 301 549 viide:**  
-§9.1.3.1 Info and Relationships
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Keelevahetuse menüü loetakse ette kui „Button ET“, kuid puudub täpsustus, et tegemist on keelevahetuse menüüga. Lehel on kaks suurt menüüd ilma eristava kirjelduseta ning puudub `h1` pealkiri.
+- **Odavad kaubad:** Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata, lehel puudub `h2` ning paginatsioon ei anna teada, millisel lehel kasutaja asub.
+- **Toode:** Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata.
+- **Ostukorv:** Keelevahetuse menüü kirjeldus puudub. Toote eemaldamisest või koguse vähendamisest ostukorvis ei teavitata.
+- **Ostu vormistamine:** Keelevahetuse menüü kirjeldus puudub. Vahele on jäänud `h2` ning vormiväljad, raadionupud ja märkeruudud ei ole seotud oma siltidega.
+- **Kontaktid:** Keelevahetuse menüü kirjeldus puudub.
+- **Juhend:** Keelevahetuse menüü kirjeldus puudub ning alamlehel on tühi `h2` taseme pealkiri.
+- **Kinkekaart:** Keelevahetuse menüü kirjeldus puudub.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -291,11 +304,19 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 
 ## WCAG 4.1.2 Name, Role, Value
 
+**EN 310 549 viide:**  
+§9.4.1.2 Name, Role, Value
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#name-role-value>
 
-**EN 301 549 viide:**  
-§9.4.1.2 Name, Role, Value
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Menüüd ei anna olekuteavet: aktiivne menüüpunkt ei ole tuvastatav ning alamenüü avatud või suletud olekut ei edastata.
+- **Odavad kaubad:** Menüüd ei anna olekuteavet ning märkeruutude puhul ei loeta ette, kas need on märgistatud või mitte.
+- **Toode:** Menüüd ei anna olekuteavet ning akordionide avatud või suletud olekut ei edastata.
+- **Ostu vormistamine:** Menüüd ei anna olekuteavet; aktiivne menüüpunkt ja alamenüü avatud või suletud olek ei ole abitehnoloogiale selged.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -333,11 +354,21 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ## WCAG 1.4.3 Contrast (Minimum)
 
+**EN 310 549 viide:**  
+§9.1.4.3 Contrast (Minimum)
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum>
 
-**EN 301 549 viide:**  
-§9.1.4.3 Contrast (Minimum)
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Küpsiste akna sinise nupu ja valge teksti kontrastsus on 1.5:1. Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1, otsinguvälja placeholder'i kontrastsus 3:1 ning ostukorvi halli teksti kontrastsus 2.5:1.
+- **Odavad kaubad:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on leivapuru kontrastsus 3.5:1, toote hinna kontrastsus 3.5:1 ning sildi sinise tausta ja valge teksti kontrastsus 2.5:1.
+- **Ostukorv:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on „Teade“ välja placeholder'i kontrastsus 1.5:1, nuppude sinise teksti kontrastsus 4:1 ning vana läbikriipsutatud hinna kontrastsus 3.5:1.
+- **Ostu vormistamine:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Tagasi nupu hover-oleku kontrastsus on 4:1 ning ülevaates on halli teksti kontrastsus 3.74:1.
+- **Kontaktid:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
+- **Juhend:** Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -370,11 +401,18 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ## WCAG 1.4.11 Non-text Contrast
 
+**EN 310 549 viide:**  
+§9.1.4.11 Non-text Contrast
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast>
 
-**EN 301 549 viide:**  
-§9.1.4.11 Non-text Contrast
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** „Logi sisse“ nupu tausta ja lehe tausta kontrastsus on 2:1. Ostukorvi nupu sinise tausta ja lehe tausta kontrastsus on 1.5:1.
+- **Ostukorv:** Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Lisaks on sisestusväljade piirjoone ja tausta kontrastsus 1.5:1.
+- **Kontaktid:** Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Linkide teksti ja tausta kontrastsus on 4.36:1.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -405,11 +443,20 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ## WCAG 2.4.7 Focus Visible
 
+**EN 310 549 viide:**  
+§9.2.4.7 Focus Visible
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#focus-visible>
 
-**EN 301 549 viide:**  
-§9.2.4.7 Focus Visible
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Keele muutmise menüül, osadel ikoonidel ja osadel reklaamidel puudub nähtav fookus või see on halvasti eristatav.
+- **Odavad kaubad:** Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. „Lisa ostukorvi“ nupul puudub samuti nähtav fookus.
+- **Ostukorv:** Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus.
+- **Ostu vormistamine:** Keele muutmise menüül, osadel ikoonidel, märkeruutudel ja raadionuppudel puudub nähtav fookus.
+- **Kontaktid:** Keele muutmise menüül puudub nähtav fookus.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -441,11 +488,19 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ## WCAG 1.1.1 Non-text Content
 
+**EN 310 549 viide:**  
+§9.1.1.1 Non-text Content
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#non-text-content>
 
-**EN 301 549 viide:**  
-§9.1.1.1 Non-text Content
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Ostukorvi ikooni juures kuvatakse toodete kogus, kuid ekraanilugejale ei täpsustata, et number tähistab ostukorvis olevate toodete kogust. Osadel pakkumistel ei eristata uue ja vana hinna tähendust.
+- **Odavad kaubad:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Paginatsioon loeb ette ainult numbrid, kuid ei täpsusta, et tegemist on lehtedega.
+- **Toode:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge.
+- **Ostu vormistamine:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Ülevaates oleval pakendi ikoonil puudub ligipääsetav kirjeldus.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -476,11 +531,16 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ## WCAG 3.3.1 Error Identification
 
+**EN 310 549 viide:**  
+§9.3.3.1 Error Identification
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#error-identification>
 
-**EN 301 549 viide:**  
-§9.3.3.1 Error Identification
+### Lühiselgitused
+{: .no_toc }
+
+- **Ostu vormistamine:** Vigase välja alla kuvatakse veateade, kuid väli ise ei ole visuaalselt eristatud.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -501,11 +561,16 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ## WCAG 3.3.2 Labels or Instructions
 
+**EN 310 549 viide:**  
+§9.3.3.2 Labels or Instructions
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions>
 
-**EN 301 549 viide:**  
-§9.3.3.2 Labels or Instructions
+### Lühiselgitused
+{: .no_toc }
+
+- **Ostu vormistamine:** Kohustuslike väljade ees on tärn (*), kuid puudub selgitus, mida see tähendab. Lehel on palju erineva kujundusega vorme ning osade vormide puhul ei ole aru saada, kas need on kohustuslikud või mitte.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -529,11 +594,16 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ## WCAG 3.3.3 Error Suggestion
 
+**EN 310 549 viide:**  
+§9.3.3.3 Error Suggestion
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion>
 
-**EN 301 549 viide:**  
-§9.3.3.3 Error Suggestion
+### Lühiselgitused
+{: .no_toc }
+
+- **Ostu vormistamine:** Veateadetes puuduvad parandamise soovitused.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -554,11 +624,16 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 ## WCAG 3.1.1 Language of Page
 
+**EN 310 549 viide:**  
+§9.3.1.1 Language of Page
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#language-of-page>
 
-**EN 301 549 viide:**  
-§9.3.1.1 Language of Page
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Vene- ja ingliskeelses vaates on osa tekstidest tõlkimata.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -586,11 +661,16 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 ## WCAG 2.2.2 Pause, Stop, Hide
 
+**EN 310 549 viide:**  
+§9.2.2.2 Pause, Stop, Hide
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide>
 
-**EN 301 549 viide:**  
-§9.2.2.2 Pause, Stop, Hide
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Avalehel on kasutusel karussell, mida ei ole võimalik peatada.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -611,11 +691,16 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 ## WCAG 2.4.2 Page Titled
 
+**EN 310 549 viide:**  
+§9.2.4.2 Page Titled
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#page-titled>
 
-**EN 301 549 viide:**  
-§9.2.4.2 Page Titled
+### Lühiselgitused
+{: .no_toc }
+
+- **Ostukorv:** Lehe tiitel on „test.ee“, mis ei anna teada, et tegemist on ostukorvi vaatega.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -636,11 +721,16 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 ## WCAG 1.3.5 Identify Input Purpose
 
+**EN 310 549 viide:**  
+§9.1.3.5 Identify Input Purpose
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose>
 
-**EN 301 549 viide:**  
-§9.1.3.5 Identify Input Purpose
+### Lühiselgitused
+{: .no_toc }
+
+- **Ostu vormistamine:** Vormidel puudub `autocomplete` atribuut.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -661,11 +751,18 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ## WCAG 4.1.3 Status Messages
 
+**EN 310 549 viide:**  
+§9.4.1.3 Status Messages
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#status-messages>
 
-**EN 301 549 viide:**  
-§9.4.1.3 Status Messages
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Otsingutulemuste puhul ei anta teada, mitu tulemust otsinguga leiti.
+- **Odavad kaubad:** Otsingutulemuste arvu ei teatata. Filtri rakendamisel ei anta automaatselt teada, mitu tulemust valikusse jäi.
+- **Ostukorv:** Otsingutulemuste arvu ei teatata. Toote eemaldamisel ostukorvist ei anta teada, et toode eemaldati. Koguse muutmisel ei teatata, et muudatus tehti ega mitu eset ostukorvi jäi.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -693,11 +790,16 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ## WCAG 2.4.3 Focus Order
 
+**EN 310 549 viide:**  
+§9.2.4.3 Focus Order
+
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#focus-order>
 
-**EN 301 549 viide:**  
-§9.2.4.3 Focus Order
+### Lühiselgitused
+{: .no_toc }
+
+- **Toode:** Pärast sisselogimise nuppu liigub klaviatuuri fookus korraks jalusesse.
 
 ### Esineb alamlehtedel
 {: .no_toc }
@@ -720,8 +822,14 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 ## EN 301 549 §11.7 User Preferences
 
-**EN 301 549 viide:**  
+**EN 310 549 viide:**  
 §11.7 User Preferences
+
+### Lühiselgitused
+{: .no_toc }
+
+- **Avaleht:** Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks.
+- **Ostukorv:** Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks ning märkeruutudel kaob oleku eristus.
 
 ### Esineb alamlehtedel
 {: .no_toc }
