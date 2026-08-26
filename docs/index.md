@@ -16,8 +16,6 @@ toc_sticky: true
 | Hindamise kuupäev | 26.08.2026 |
 | Tagasiside kuupäev| 27.08.2026 |
 
-> Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
-
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
 
@@ -154,6 +152,8 @@ toc_sticky: true
 | Kontrolli liik | Põhjalik audit |
 | Testitud alamlehti | 8 |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
+
+> Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
 # Üldtulemus
 
