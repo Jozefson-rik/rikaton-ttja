@@ -156,11 +156,15 @@ toc_sticky: true
 | Testitud alamlehti | 8 |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
 
-> Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
-
 # Sissejuhatus
 
-Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime.
+Käesolev aruanne annab juhtkonnale koondülevaate veebilehe [test.ee](https://www.test.ee/) digiligipääsetavuse hetkeseisust, peamistest mittevastavustest ja nende võimalikust mõjust kasutajatele. Hindamine viidi läbi põhjaliku auditina, mille käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel. Auditi tulemusel tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
+
+Leitud puudused ei ole ainult tehnilised detailid, vaid mõjutavad otseselt seda, kas erinevate vajadustega inimesed saavad veebilehte iseseisvalt kasutada. Kõige suurema mõjuga probleemid puudutavad klaviatuuriga navigeerimist, ekraanilugeja tuge, fookuse nähtavust, kasutajaliidese komponentide olekuteavet ning teksti ja kasutajaliidese elementide kontrastsust. Need puudused võivad takistada veebilehe kasutamist näiteks pimedatel ja vaegnägijatel, liikumispuudega kasutajatel, klaviatuuriga navigeerijatel ning inimestel, kes kasutavad suurendust või kõrgkontrastset kuvarežiimi.
+
+Juhtimise seisukohast tähendab see, et ligipääsetavuse parandamine vajab selget prioriseerimist ja vastutust. Esmalt tuleks lahendada kriitilised probleemid, mis takistavad teenuse põhifunktsioonide kasutamist, sealhulgas klaviatuurikasutuse, semantilise struktuuri, ARIA olekute ja põhisisu juurde liikumisega seotud puudused. Seejärel tuleks tegeleda kõrge prioriteediga visuaalsete ja kasutajaliidese probleemidega, nagu kontrastsus, fookuse nähtavus ja alternatiivtekstid.
+
+Aruande eesmärk on toetada praktilist parandusplaani: iga leiu juures on toodud seotud standardiviited, mõju kasutajale, vastutaja, mõjutatud alamlehed ning tehniline viide või CSS-valija, mille abil saab arendustööde käigus probleemi kiiremini üles leida. Soovitatud tegevuskava jagab parandused 30, 90 ja 180 päeva vaatesse, et kriitilised takistused saaksid lahendatud enne väiksema mõjuga puudusi.
 
 ---
 
