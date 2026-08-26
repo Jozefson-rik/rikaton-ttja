@@ -9,7 +9,7 @@ toc_sticky: true
 
 # Digiligipääsetavuse kontrolli aruanne
 
-> Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus. 【1-23880b】
+> Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
 ## Sisukord
 {: .no_toc }
@@ -134,21 +134,21 @@ toc_sticky: true
 
 ## Üldtulemus
 
-Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime. 【1-23880b】
+Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime.
 
 ## Kõige olulisemad probleemid
 
-1. Klaviatuuriga navigeerimine ei ole täielikult kasutatav. 【1-23880b】
-2. Ekraanilugejaga kasutamisel puuduvad oluliste elementide kirjeldused ja olekuteave. 【1-23880b】
-3. Mitmete komponentide kontrastsus ei vasta WCAG nõuetele. 【1-23880b】
-4. Puudub võimalus liikuda otse põhisisu juurde. 【1-23880b】
-5. Vormid ei anna kasutajatele piisavaid juhiseid ja parandamissoovitusi. 【1-23880b】
+1. Klaviatuuriga navigeerimine ei ole täielikult kasutatav.
+2. Ekraanilugejaga kasutamisel puuduvad oluliste elementide kirjeldused ja olekuteave.
+3. Mitmete komponentide kontrastsus ei vasta WCAG nõuetele.
+4. Puudub võimalus liikuda otse põhisisu juurde.
+5. Vormid ei anna kasutajatele piisavaid juhiseid ja parandamissoovitusi.
 
 ---
 
 # Ligipääsetavuse teatise hinnang
 
-Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on kontrollida, kas kõik allpool kirjeldatud puudused on ligipääsetavuse teatises korrektselt kajastatud. 【1-23880b】
+Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on kontrollida, kas kõik allpool kirjeldatud puudused on ligipääsetavuse teatises korrektselt kajastatud.
 
 ---
 
@@ -172,7 +172,7 @@ Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on ko
 
 ### Mõju kasutajale
 
-Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. 【1-23880b】
+Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 
 ### Probleemid
 
@@ -205,7 +205,7 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. 【1-23880b】
 
 ### Mõju kasutajale
 
-Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. 【1-23880b】
+Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist.
 
 ### Probleem
 
@@ -235,7 +235,7 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 
 ### Mõju kasutajale
 
-Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. 【1-23880b】
+Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 
 ### Probleemid
 
@@ -268,7 +268,7 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. 【1-23880b�
 
 ### Mõju kasutajale
 
-Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-23880b】
+Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ### Probleemid
 
@@ -415,7 +415,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Probleem
 
-Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input` 【1-23880b】
+Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input`
 
 ### Vastutaja
 
@@ -456,7 +456,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ### Probleem
 
-Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message` 【1-23880b】
+Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message`
 
 ### Vastutaja
 
@@ -482,7 +482,7 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 ### Probleem
 
-Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu. 【1-23880b】
+Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 ### Vastutaja
 
@@ -501,7 +501,7 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu. 【1-23880b】
 
 ### Probleem
 
-Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel` 【1-23880b】
+Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 ### Vastutaja
 
@@ -520,7 +520,7 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel` 【1-23880b�
 
 ### Probleem
 
-Lehe pealkiri ei kirjelda ostukorvi vaadet. 【1-23880b】
+Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 ### Vastutaja
 
@@ -539,7 +539,7 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet. 【1-23880b】
 
 ### Probleem
 
-Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]` 【1-23880b】
+Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]`
 
 ### Vastutaja
 
@@ -584,7 +584,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ### Probleem
 
-Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a` 【1-23880b】
+Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a`
 
 ### Vastutaja
 
@@ -611,7 +611,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 - Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
 - Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks. CSS selector: `.button, .form-control, .product-card`
-- Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg` 【1-23880b】
+- Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg`
 
 ### Vastutaja
 
@@ -673,5 +673,5 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 # Kokkuvõte
 
-Audit tuvastas kokku **20 nõuet, mille puhul esines vähemalt üks mittevastavus**. Suurima mõjuga puudused on seotud klaviatuurikasutuse, ekraanilugeja toe, kontrastsuse ning semantilise struktuuriga. Nende parandamine tõstab oluliselt veebilehe vastavust standarditele EN 301 549 ja WCAG 2.2 ning parandab kasutuskogemust kõigile kasutajatele. 【1-23880b】
+Audit tuvastas kokku **20 nõuet, mille puhul esines vähemalt üks mittevastavus**. Suurima mõjuga puudused on seotud klaviatuurikasutuse, ekraanilugeja toe, kontrastsuse ning semantilise struktuuriga. Nende parandamine tõstab oluliselt veebilehe vastavust standarditele EN 301 549 ja WCAG 2.2 ning parandab kasutuskogemust kõigile kasutajatele.
 ``
