@@ -17,6 +17,97 @@ toc_sticky: true
 * TOC
 {:toc}
 
+<style>
+	.audit-finding-toggle {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.35rem 0;
+		border: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		cursor: pointer;
+	}
+
+	.audit-finding-toggle:hover span:first-child {
+		text-decoration: underline;
+	}
+
+	.audit-finding-toggle:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
+	.audit-finding-toggle__icon {
+		flex: 0 0 auto;
+		min-width: 1.5rem;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	.audit-finding-panel[hidden] {
+		display: none;
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const headings = Array.from(document.querySelectorAll("main h2, .main-content h2"));
+		const issueHeadingPattern = /^(WCAG|EN 301 549)/;
+
+		headings.forEach((heading, index) => {
+			const title = heading.textContent.trim();
+
+			if (!issueHeadingPattern.test(title)) {
+				return;
+			}
+
+			const panel = document.createElement("div");
+			panel.className = "audit-finding-panel";
+			panel.id = `audit-finding-panel-${index}`;
+
+			let nextElement = heading.nextElementSibling;
+
+			while (nextElement && !["H1", "H2"].includes(nextElement.tagName)) {
+				const elementToMove = nextElement;
+				nextElement = nextElement.nextElementSibling;
+				panel.appendChild(elementToMove);
+			}
+
+			heading.after(panel);
+
+			const button = document.createElement("button");
+			button.className = "audit-finding-toggle";
+			button.type = "button";
+			button.setAttribute("aria-expanded", "true");
+			button.setAttribute("aria-controls", panel.id);
+
+			const label = document.createElement("span");
+			label.textContent = title;
+
+			const icon = document.createElement("span");
+			icon.className = "audit-finding-toggle__icon";
+			icon.setAttribute("aria-hidden", "true");
+			icon.textContent = "−";
+
+			button.append(label, icon);
+			heading.textContent = "";
+			heading.appendChild(button);
+
+			button.addEventListener("click", () => {
+				const expanded = button.getAttribute("aria-expanded") === "true";
+				button.setAttribute("aria-expanded", String(!expanded));
+				panel.hidden = expanded;
+				icon.textContent = expanded ? "+" : "−";
+			});
+		});
+	});
+</script>
+
 ---
 
 # Juhtkokkuvõte
@@ -60,14 +151,14 @@ Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on ko
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
 
@@ -75,10 +166,10 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. 【1-23880b】
 
 ### Probleemid
 
-- Fookus ei liigu sisselogimise dialoogi.
-- Otsingusoovitused avanevad automaatselt.
-- Mõned juhtelemendid ei ole klaviatuuriga kasutatavad.
-- Osa elemente jäetakse vahele.
+- Fookus ei liigu sisselogimise dialoogi. CSS selector: `.login-dialog`
+- Otsingusoovitused avanevad automaatselt. CSS selector: `.site-search__suggestions`
+- Mõned juhtelemendid ei ole klaviatuuriga kasutatavad. CSS selector: `.product-card__quick-action`
+- Osa elemente jäetakse vahele. CSS selector: `.main-navigation a, .header-actions button`
 
 ### Vastutaja
 
@@ -93,14 +184,14 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
 
@@ -108,7 +199,7 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 
 ### Probleem
 
-- Puudub ülehüppamislink põhisisu juurde.
+- Puudub ülehüppamislink põhisisu juurde. CSS selector: `.skip-link`
 
 ### Vastutaja
 
@@ -123,14 +214,14 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
 
@@ -138,10 +229,10 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. 【1-23880b�
 
 ### Probleemid
 
-- Puuduvad või vahele jäetud pealkirjatasemed.
-- Vormiväljad ei ole seotud siltidega.
-- Menüüdel puuduvad eristavad kirjeldused.
-- Dünaamilistest muudatustest ei teavitata.
+- Puuduvad või vahele jäetud pealkirjatasemed. CSS selector: `main h1, main h2, main h3`
+- Vormiväljad ei ole seotud siltidega. CSS selector: `.checkout-form input, .checkout-form select`
+- Menüüdel puuduvad eristavad kirjeldused. CSS selector: `nav.main-navigation, nav.footer-navigation`
+- Dünaamilistest muudatustest ei teavitata. CSS selector: `.search-results, .cart-status`
 
 ### Vastutaja
 
@@ -156,14 +247,14 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. 【1-23880b�
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
 
@@ -171,10 +262,10 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Probleemid
 
-- Aktiivne menüüpunkt ei ole tuvastatav.
-- Avatud/suletud olek puudub.
-- Märkeruutude olekut ei edastata.
-- Akordionide olekuid ei loeta ette.
+- Aktiivne menüüpunkt ei ole tuvastatav. CSS selector: `.main-navigation__link.is-active`
+- Avatud/suletud olek puudub. CSS selector: `.menu-toggle, .filter-toggle`
+- Märkeruutude olekut ei edastata. CSS selector: `.filter-panel input[type="checkbox"]`
+- Akordionide olekuid ei loeta ette. CSS selector: `.accordion__trigger`
 
 ### Vastutaja
 
@@ -191,23 +282,23 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
 
-- Küpsiste akna nupud
-- Placeholder-tekstid
-- Hinnad
-- Leivapurud
-- Lingid
-- Menüüelemendid
+- Küpsiste akna nupud. CSS selector: `.cookie-banner button`
+- Placeholder-tekstid. CSS selector: `input::placeholder, textarea::placeholder`
+- Hinnad. CSS selector: `.product-card__price, .product-detail__price`
+- Leivapurud. CSS selector: `.breadcrumbs a`
+- Lingid. CSS selector: `main a`
+- Menüüelemendid. CSS selector: `.main-navigation__link`
 
 ### Vastutaja
 
@@ -222,21 +313,21 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
 
-- Sisestusväljade piirjooned
-- Ostukorvi nupud
-- Sisselogimise nupud
-- Muud kasutajaliidese komponendid ei eristu taustast piisavalt
+- Sisestusväljade piirjooned. CSS selector: `input, select, textarea`
+- Ostukorvi nupud. CSS selector: `.cart-summary button, .cart-item__action`
+- Sisselogimise nupud. CSS selector: `.login-dialog button`
+- Muud kasutajaliidese komponendid ei eristu taustast piisavalt. CSS selector: `.button--secondary, .icon-button`
 
 ### Vastutaja
 
@@ -251,22 +342,22 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
 
-- Keelevahetaja
-- Ikoonid
-- Ostukorvi nupud
-- Märkeruudud
-- Raadionupud
+- Keelevahetaja. CSS selector: `.language-switcher a, .language-switcher button`
+- Ikoonid. CSS selector: `.icon-button`
+- Ostukorvi nupud. CSS selector: `.cart-summary button, .cart-item__action`
+- Märkeruudud. CSS selector: `input[type="checkbox"]`
+- Raadionupud. CSS selector: `input[type="radio"]`
 
 ### Vastutaja
 
@@ -281,18 +372,18 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleemid
 
-- Reklaambännerid
-- Tootepakendi ikoonid
-- Ostukorvi ikoon
-- Visuaalset infot sisaldavad pildid ilma piisava alternatiivkirjelduseta
+- Reklaambännerid. CSS selector: `.promo-banner img`
+- Tootepakendi ikoonid. CSS selector: `.product-badge img, .product-badge svg`
+- Ostukorvi ikoon. CSS selector: `.header-cart__icon`
+- Visuaalset infot sisaldavad pildid ilma piisava alternatiivkirjelduseta. CSS selector: `img:not([alt]), img[alt=""]`
 
 ### Vastutaja
 
@@ -310,11 +401,11 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. 【1-2388
 
 ### Esineb alamlehtedel
 
-- Ostu vormistamine
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
 
-Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. 【1-23880b】
+Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input` 【1-23880b】
 
 ### Vastutaja
 
@@ -329,12 +420,12 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ### Esineb alamlehtedel
 
-- Ostu vormistamine
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleemid
 
-- Kohustuslikud väljad ei ole alati selgelt eristatavad.
-- Tärni (*) tähendust ei selgitata.
+- Kohustuslikud väljad ei ole alati selgelt eristatavad. CSS selector: `.checkout-form [required]`
+- Tärni (*) tähendust ei selgitata. CSS selector: `.checkout-form .required-marker`
 - Kasutajale ei ole alati selge, millist infot temalt oodatakse.
 
 ### Vastutaja
@@ -351,11 +442,11 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ### Esineb alamlehtedel
 
-- Ostu vormistamine
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
 
-Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. 【1-23880b】
+Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message` 【1-23880b】
 
 ### Vastutaja
 
@@ -370,14 +461,14 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. 【
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleem
 
@@ -396,11 +487,11 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Avaleht
+- [Avaleht](https://www.test.ee/)
 
 ### Probleem
 
-Karusselli ei ole võimalik peatada. 【1-23880b】
+Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel` 【1-23880b】
 
 ### Vastutaja
 
@@ -415,7 +506,7 @@ Karusselli ei ole võimalik peatada. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Ostukorv
+- [Ostukorv](https://www.test.ee/ostukorv)
 
 ### Probleem
 
@@ -434,11 +525,11 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Ostu vormistamine
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
 
-Vormiväljadel puuduvad autocomplete atribuudid. 【1-23880b】
+Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]` 【1-23880b】
 
 ### Vastutaja
 
@@ -453,18 +544,18 @@ Vormiväljadel puuduvad autocomplete atribuudid. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
 
-- Otsingutulemuste arvust ei teavitata.
-- Filtri mõjust ei teavitata.
-- Toote lisamisest ostukorvi ei teavitata.
-- Toote eemaldamisest ostukorvist ei teavitata.
+- Otsingutulemuste arvust ei teavitata. CSS selector: `.search-results-count`
+- Filtri mõjust ei teavitata. CSS selector: `.filter-results-status`
+- Toote lisamisest ostukorvi ei teavitata. CSS selector: `.add-to-cart-button`
+- Toote eemaldamisest ostukorvist ei teavitata. CSS selector: `.cart-item__remove`
 
 ### Vastutaja
 
@@ -479,11 +570,11 @@ Vormiväljadel puuduvad autocomplete atribuudid. 【1-23880b】
 
 ### Esineb alamlehtedel
 
-- Toode
+- [Toode](https://www.test.ee/toode)
 
 ### Probleem
 
-Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. 【1-23880b】
+Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a` 【1-23880b】
 
 ### Vastutaja
 
@@ -497,20 +588,20 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 ### Esineb alamlehtedel
 
-- Avaleht
-- Odavad kaubad
-- Toode
-- Ostukorv
-- Ostu vormistamine
-- Kontaktid
-- Juhend
-- Kinkekaart
+- [Avaleht](https://www.test.ee/)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Toode](https://www.test.ee/toode)
+- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Kontaktid](https://www.test.ee/kontaktid)
+- [Juhend](https://www.test.ee/juhend)
+- [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
 
-- Veebileht ei järgi kasutaja teksti suuruse eelistusi.
-- Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks.
-- Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. 【1-23880b】
+- Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
+- Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks. CSS selector: `.button, .form-control, .product-card`
+- Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg` 【1-23880b】
 
 ### Vastutaja
 
