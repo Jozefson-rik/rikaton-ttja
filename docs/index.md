@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Digiligipääsetavuse kontrolli aruanne"
-permalink: /audit/test-ee/
+permalink: /
 nav_order: 1
 has_toc: true
 toc_sticky: true
