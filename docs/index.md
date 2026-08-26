@@ -11,13 +11,31 @@ toc_sticky: true
 
 > Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
-## Sisukord
-{: .no_toc }
+<details class="report-toc" open markdown="1">
+<summary>Sisukord</summary>
 
 * TOC
 {:toc}
 
+</details>
+
 <style>
+	.report-toc {
+		margin: 1.5rem 0;
+	}
+
+	.report-toc summary {
+		display: list-item;
+		font-size: 1.5rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	.report-toc summary:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
 	.audit-finding-toggle {
 		width: 100%;
 		display: flex;
@@ -159,7 +177,11 @@ Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on ko
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#keyboard>
 
+**EN 301 549 viide:**  
+§9.2.1.1 Keyboard
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -171,10 +193,12 @@ Ligipääsetavuse teatist käesoleva auditi raames ei hinnatud. Soovitatav on ko
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
+{: .no_toc }
 
 Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 
 ### Probleemid
+{: .no_toc }
 
 - Fookus ei liigu sisselogimise dialoogi. CSS selector: `.login-dialog`
 - Otsingusoovitused avanevad automaatselt. CSS selector: `.site-search__suggestions`
@@ -182,6 +206,7 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 - Osa elemente jäetakse vahele. CSS selector: `.main-navigation a, .header-actions button`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -192,7 +217,11 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks>
 
+**EN 301 549 viide:**  
+§9.2.4.1 Bypass Blocks
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -204,14 +233,17 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
+{: .no_toc }
 
 Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist.
 
 ### Probleem
+{: .no_toc }
 
 - Puudub ülehüppamislink põhisisu juurde. CSS selector: `.skip-link`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -222,7 +254,11 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships>
 
+**EN 301 549 viide:**  
+§9.1.3.1 Info and Relationships
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -234,10 +270,12 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
+{: .no_toc }
 
 Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 
 ### Probleemid
+{: .no_toc }
 
 - Puuduvad või vahele jäetud pealkirjatasemed. CSS selector: `main h1, main h2, main h3`
 - Vormiväljad ei ole seotud siltidega. CSS selector: `.checkout-form input, .checkout-form select`
@@ -245,6 +283,7 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 - Dünaamilistest muudatustest ei teavitata. CSS selector: `.search-results, .cart-status`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -255,7 +294,11 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#name-role-value>
 
+**EN 301 549 viide:**  
+§9.4.1.2 Name, Role, Value
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -267,10 +310,12 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Mõju kasutajale
+{: .no_toc }
 
 Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 ### Probleemid
+{: .no_toc }
 
 - Aktiivne menüüpunkt ei ole tuvastatav. CSS selector: `.main-navigation__link.is-active`
 - Avatud/suletud olek puudub. CSS selector: `.menu-toggle, .filter-toggle`
@@ -278,6 +323,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Akordionide olekuid ei loeta ette. CSS selector: `.accordion__trigger`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -290,7 +336,11 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum>
 
+**EN 301 549 viide:**  
+§9.1.4.3 Contrast (Minimum)
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -302,6 +352,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
+{: .no_toc }
 
 - Küpsiste akna nupud. CSS selector: `.cookie-banner button`
 - Placeholder-tekstid. CSS selector: `input::placeholder, textarea::placeholder`
@@ -311,6 +362,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Menüüelemendid. CSS selector: `.main-navigation__link`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -321,7 +373,11 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast>
 
+**EN 301 549 viide:**  
+§9.1.4.11 Non-text Contrast
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -333,6 +389,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
+{: .no_toc }
 
 - Sisestusväljade piirjooned. CSS selector: `input, select, textarea`
 - Ostukorvi nupud. CSS selector: `.cart-summary button, .cart-item__action`
@@ -340,6 +397,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Muud kasutajaliidese komponendid ei eristu taustast piisavalt. CSS selector: `.button--secondary, .icon-button`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -350,7 +408,11 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#focus-visible>
 
+**EN 301 549 viide:**  
+§9.2.4.7 Focus Visible
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -362,6 +424,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
+{: .no_toc }
 
 - Keelevahetaja. CSS selector: `.language-switcher a, .language-switcher button`
 - Ikoonid. CSS selector: `.icon-button`
@@ -370,6 +433,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Raadionupud. CSS selector: `input[type="radio"]`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -380,7 +444,11 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#non-text-content>
 
+**EN 301 549 viide:**  
+§9.1.1.1 Non-text Content
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -389,6 +457,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleemid
+{: .no_toc }
 
 - Reklaambännerid. CSS selector: `.promo-banner img`
 - Tootepakendi ikoonid. CSS selector: `.product-badge img, .product-badge svg`
@@ -396,6 +465,7 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Visuaalset infot sisaldavad pildid ilma piisava alternatiivkirjelduseta. CSS selector: `img:not([alt]), img[alt=""]`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja  
 ✅ Sisutoimetaja
@@ -409,15 +479,21 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#error-identification>
 
+**EN 301 549 viide:**  
+§9.3.3.1 Error Identification
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
+{: .no_toc }
 
 Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -428,17 +504,23 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions>
 
+**EN 301 549 viide:**  
+§9.3.3.2 Labels or Instructions
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleemid
+{: .no_toc }
 
 - Kohustuslikud väljad ei ole alati selgelt eristatavad. CSS selector: `.checkout-form [required]`
 - Tärni (*) tähendust ei selgitata. CSS selector: `.checkout-form .required-marker`
 - Kasutajale ei ole alati selge, millist infot temalt oodatakse.
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja  
 ✅ Sisutoimetaja
@@ -450,15 +532,21 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion>
 
+**EN 301 549 viide:**  
+§9.3.3.3 Error Suggestion
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
+{: .no_toc }
 
 Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -469,7 +557,11 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#language-of-page>
 
+**EN 301 549 viide:**  
+§9.3.1.1 Language of Page
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -481,10 +573,12 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleem
+{: .no_toc }
 
 Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Sisutoimetaja
 
@@ -495,15 +589,21 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide>
 
+**EN 301 549 viide:**  
+§9.2.2.2 Pause, Stop, Hide
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 
 ### Probleem
+{: .no_toc }
 
 Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -514,15 +614,21 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#page-titled>
 
+**EN 301 549 viide:**  
+§9.2.4.2 Page Titled
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Ostukorv](https://www.test.ee/ostukorv)
 
 ### Probleem
+{: .no_toc }
 
 Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -533,15 +639,21 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose>
 
+**EN 301 549 viide:**  
+§9.1.3.5 Identify Input Purpose
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 
 ### Probleem
+{: .no_toc }
 
 Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -552,7 +664,11 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#status-messages>
 
+**EN 301 549 viide:**  
+§9.4.1.3 Status Messages
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -561,6 +677,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
+{: .no_toc }
 
 - Otsingutulemuste arvust ei teavitata. CSS selector: `.search-results-count`
 - Filtri mõjust ei teavitata. CSS selector: `.filter-results-status`
@@ -568,6 +685,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 - Toote eemaldamisest ostukorvist ei teavitata. CSS selector: `.cart-item__remove`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -578,15 +696,21 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 **WCAG viide:**  
 <https://www.w3.org/WAI/WCAG22/quickref/#focus-order>
 
+**EN 301 549 viide:**  
+§9.2.4.3 Focus Order
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Toode](https://www.test.ee/toode)
 
 ### Probleem
+{: .no_toc }
 
 Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
@@ -596,7 +720,11 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 ## EN 301 549 §11.7 User Preferences
 
+**EN 301 549 viide:**  
+§11.7 User Preferences
+
 ### Esineb alamlehtedel
+{: .no_toc }
 
 - [Avaleht](https://www.test.ee/)
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
@@ -608,12 +736,14 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
 ### Probleemid
+{: .no_toc }
 
 - Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
 - Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks. CSS selector: `.button, .form-control, .product-card`
 - Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg`
 
 ### Vastutaja
+{: .no_toc }
 
 ✅ Arendaja
 
