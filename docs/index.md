@@ -16,7 +16,7 @@ toc_sticky: true
 | Hindamise kuupäev | 26.08.2026 |
 | Tagasiside kuupäev| 27.08.2026 |
 
-> Käesolev aruanne on koostatud faili „Põhjalik seire_test.xlsx“ hindamistulemuste põhjal. Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
+> Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
