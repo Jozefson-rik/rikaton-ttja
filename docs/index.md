@@ -12,9 +12,11 @@ toc_sticky: true
 
 | Väli | Väärtus |
 |---|---|
-| Hindaja | TTJA gäng - [email](email@ttja.ee)|
+| Hindamise läbiviija | Toomas ja pojad OÜ|
 | Hindamise kuupäev | 26.08.2026 |
-| Tagasiside kuupäev| 27.08.2026 |
+| Tagasiside tähtaeg | 30.12.2026 |
+| Kontakt | [mingiemail@ttja.ee](mingiemail@ttja.ee) |
+
 
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
@@ -147,6 +149,7 @@ toc_sticky: true
 
 | Väli | Väärtus |
 |--------|--------|
+| Hindamise viis | käsitsi |
 | Veebileht | test.ee |
 | Standard | EN 301 549 V3.2.1 / WCAG |
 | Kontrolli liik | Põhjalik audit |
@@ -155,7 +158,7 @@ toc_sticky: true
 
 > Testitud oli 8 alamlehte ning tuvastati kokku 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
 
-# Üldtulemus
+# Sissejuhatus
 
 Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis mõjutavad klaviatuurikasutajaid, ekraanilugeja kasutajaid, vaegnägijaid ning kasutajaid, kes kasutavad suurendust või kõrgkontrastseid režiime.
 
@@ -167,34 +170,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.1.1 Keyboard |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.2.1.1 Keyboard |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#keyboard> |
 | Mõju kasutajale | Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Klaviatuuri fookus ei liigu sisselogimise aknasse, vaid jääb taustal liikuma. Otsingusoovitused avanevad automaatselt ning neid ei ole võimalik vahele jätta. Jaluses jäetakse partnerite logod vahele.
-- **Odavad kaubad:** Lisaks sisselogimise akna ja otsingusoovituste probleemile ei liigu fookus sorteerimise valikule.
-- **Ostukorv:** Klaviatuuri fookus jääb sisselogimise akna avamisel taustale liikuma ning otsingusoovitusi ei saa vahele jätta.
-- **Ostu vormistamine:** Lisaks üldistele klaviatuuriprobleemidele ei liigu fookus aja valiku aknale ning aega ei saa sisestusväljale trükkida.
-- **Kontaktid:** Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
-- **Kinkekaart:** Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Avaleht](https://www.test.ee/): Klaviatuuri fookus ei liigu sisselogimise aknasse, vaid jääb taustal liikuma. Otsingusoovitused avanevad automaatselt ning neid ei ole võimalik vahele jätta. Jaluses jäetakse partnerite logod vahele.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Lisaks sisselogimise akna ja otsingusoovituste probleemile ei liigu fookus sorteerimise valikule.
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
+- [Ostukorv](https://www.test.ee/ostukorv): Klaviatuuri fookus jääb sisselogimise akna avamisel taustale liikuma ning otsingusoovitusi ei saa vahele jätta.
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Lisaks üldistele klaviatuuriprobleemidele ei liigu fookus aja valiku aknale ning aega ei saa sisestusväljale trükkida.
+- [Kontaktid](https://www.test.ee/kontaktid): Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
 - [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Kinkekaart](https://www.test.ee/kinkekaart): Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Fookus ei liigu sisselogimise dialoogi. CSS selector: `.login-dialog`
@@ -208,20 +202,16 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.1 Bypass Blocks |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.2.4.1 Bypass Blocks |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks> |
 | Mõju kasutajale | Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Lehe päist ei ole võimalik vahele jätta.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
+- [Avaleht](https://www.test.ee/): Lehe päist ei ole võimalik vahele jätta.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
 - [Toode](https://www.test.ee/toode)
 - [Ostukorv](https://www.test.ee/ostukorv)
@@ -241,36 +231,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.3.1 Info and Relationships |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.1.3.1 Info and Relationships |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships> |
 | Mõju kasutajale | Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Keelevahetuse menüü loetakse ette kui „Button ET“, kuid puudub täpsustus, et tegemist on keelevahetuse menüüga. Lehel on kaks suurt menüüd ilma eristava kirjelduseta ning puudub `h1` pealkiri.
-- **Odavad kaubad:** Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata, lehel puudub `h2` ning paginatsioon ei anna teada, millisel lehel kasutaja asub.
-- **Toode:** Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata.
-- **Ostukorv:** Keelevahetuse menüü kirjeldus puudub. Toote eemaldamisest või koguse vähendamisest ostukorvis ei teavitata.
-- **Ostu vormistamine:** Keelevahetuse menüü kirjeldus puudub. Vahele on jäänud `h2` ning vormiväljad, raadionupud ja märkeruudud ei ole seotud oma siltidega.
-- **Kontaktid:** Keelevahetuse menüü kirjeldus puudub.
-- **Juhend:** Keelevahetuse menüü kirjeldus puudub ning alamlehel on tühi `h2` taseme pealkiri.
-- **Kinkekaart:** Keelevahetuse menüü kirjeldus puudub.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Avaleht](https://www.test.ee/): Keelevahetuse menüü loetakse ette kui „Button ET“, kuid puudub täpsustus, et tegemist on keelevahetuse menüüga. Lehel on kaks suurt menüüd ilma eristava kirjelduseta ning puudub `h1` pealkiri.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata, lehel puudub `h2` ning paginatsioon ei anna teada, millisel lehel kasutaja asub.
+- [Toode](https://www.test.ee/toode): Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata.
+- [Ostukorv](https://www.test.ee/ostukorv): Keelevahetuse menüü kirjeldus puudub. Toote eemaldamisest või koguse vähendamisest ostukorvis ei teavitata.
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Keelevahetuse menüü kirjeldus puudub. Vahele on jäänud `h2` ning vormiväljad, raadionupud ja märkeruudud ei ole seotud oma siltidega.
+- [Kontaktid](https://www.test.ee/kontaktid): Keelevahetuse menüü kirjeldus puudub.
+- [Juhend](https://www.test.ee/juhend): Keelevahetuse menüü kirjeldus puudub ning alamlehel on tühi `h2` taseme pealkiri.
+- [Kinkekaart](https://www.test.ee/kinkekaart): Keelevahetuse menüü kirjeldus puudub.
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Puuduvad või vahele jäetud pealkirjatasemed. CSS selector: `main h1, main h2, main h3`
@@ -284,32 +263,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.4.1.2 Name, Role, Value |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.4.1.2 Name, Role, Value |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#name-role-value> |
 | Mõju kasutajale | Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Menüüd ei anna olekuteavet: aktiivne menüüpunkt ei ole tuvastatav ning alamenüü avatud või suletud olekut ei edastata.
-- **Odavad kaubad:** Menüüd ei anna olekuteavet ning märkeruutude puhul ei loeta ette, kas need on märgistatud või mitte.
-- **Toode:** Menüüd ei anna olekuteavet ning akordionide avatud või suletud olekut ei edastata.
-- **Ostu vormistamine:** Menüüd ei anna olekuteavet; aktiivne menüüpunkt ja alamenüü avatud või suletud olek ei ole abitehnoloogiale selged.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
+- [Avaleht](https://www.test.ee/): Menüüd ei anna olekuteavet: aktiivne menüüpunkt ei ole tuvastatav ning alamenüü avatud või suletud olekut ei edastata.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Menüüd ei anna olekuteavet ning märkeruutude puhul ei loeta ette, kas need on märgistatud või mitte.
+- [Toode](https://www.test.ee/toode): Menüüd ei anna olekuteavet ning akordionide avatud või suletud olekut ei edastata.
 - [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Menüüd ei anna olekuteavet; aktiivne menüüpunkt ja alamenüü avatud või suletud olek ei ole abitehnoloogiale selged.
 - [Kontaktid](https://www.test.ee/kontaktid)
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Aktiivne menüüpunkt ei ole tuvastatav. CSS selector: `.main-navigation__link.is-active`
@@ -325,34 +297,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.4.3 Contrast (Minimum) |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.1.4.3 Contrast (Minimum) |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Küpsiste akna sinise nupu ja valge teksti kontrastsus on 1.5:1. Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1, otsinguvälja placeholder'i kontrastsus 3:1 ning ostukorvi halli teksti kontrastsus 2.5:1.
-- **Odavad kaubad:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on leivapuru kontrastsus 3.5:1, toote hinna kontrastsus 3.5:1 ning sildi sinise tausta ja valge teksti kontrastsus 2.5:1.
-- **Ostukorv:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on „Teade“ välja placeholder'i kontrastsus 1.5:1, nuppude sinise teksti kontrastsus 4:1 ning vana läbikriipsutatud hinna kontrastsus 3.5:1.
-- **Ostu vormistamine:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Tagasi nupu hover-oleku kontrastsus on 4:1 ning ülevaates on halli teksti kontrastsus 3.74:1.
-- **Kontaktid:** Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
-- **Juhend:** Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Avaleht](https://www.test.ee/): Küpsiste akna sinise nupu ja valge teksti kontrastsus on 1.5:1. Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1, otsinguvälja placeholder'i kontrastsus 3:1 ning ostukorvi halli teksti kontrastsus 2.5:1.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on leivapuru kontrastsus 3.5:1, toote hinna kontrastsus 3.5:1 ning sildi sinise tausta ja valge teksti kontrastsus 2.5:1.
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
+- [Ostukorv](https://www.test.ee/ostukorv): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on „Teade“ välja placeholder'i kontrastsus 1.5:1, nuppude sinise teksti kontrastsus 4:1 ning vana läbikriipsutatud hinna kontrastsus 3.5:1.
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Tagasi nupu hover-oleku kontrastsus on 4:1 ning ülevaates on halli teksti kontrastsus 3.74:1.
+- [Kontaktid](https://www.test.ee/kontaktid): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
+- [Juhend](https://www.test.ee/juhend): Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Küpsiste akna nupud. CSS selector: `.cookie-banner button`
@@ -368,31 +331,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.4.11 Non-text Contrast |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.1.4.11 Non-text Contrast |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** „Logi sisse“ nupu tausta ja lehe tausta kontrastsus on 2:1. Ostukorvi nupu sinise tausta ja lehe tausta kontrastsus on 1.5:1.
-- **Ostukorv:** Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Lisaks on sisestusväljade piirjoone ja tausta kontrastsus 1.5:1.
-- **Kontaktid:** Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Linkide teksti ja tausta kontrastsus on 4.36:1.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
+- [Avaleht](https://www.test.ee/): „Logi sisse“ nupu tausta ja lehe tausta kontrastsus on 2:1. Ostukorvi nupu sinise tausta ja lehe tausta kontrastsus on 1.5:1.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Lisaks on sisestusväljade piirjoone ja tausta kontrastsus 1.5:1.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
+- [Kontaktid](https://www.test.ee/kontaktid): Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Linkide teksti ja tausta kontrastsus on 4.36:1.
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Sisestusväljade piirjooned. CSS selector: `input, select, textarea`
@@ -406,33 +363,25 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.7 Focus Visible |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.2.4.7 Focus Visible |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-visible> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Keele muutmise menüül, osadel ikoonidel ja osadel reklaamidel puudub nähtav fookus või see on halvasti eristatav.
-- **Odavad kaubad:** Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. „Lisa ostukorvi“ nupul puudub samuti nähtav fookus.
-- **Ostukorv:** Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus.
-- **Ostu vormistamine:** Keele muutmise menüül, osadel ikoonidel, märkeruutudel ja raadionuppudel puudub nähtav fookus.
-- **Kontaktid:** Keele muutmise menüül puudub nähtav fookus.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Avaleht](https://www.test.ee/): Keele muutmise menüül, osadel ikoonidel ja osadel reklaamidel puudub nähtav fookus või see on halvasti eristatav.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. „Lisa ostukorvi“ nupul puudub samuti nähtav fookus.
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
+- [Ostukorv](https://www.test.ee/ostukorv): Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus.
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Keele muutmise menüül, osadel ikoonidel, märkeruutudel ja raadionuppudel puudub nähtav fookus.
+- [Kontaktid](https://www.test.ee/kontaktid): Keele muutmise menüül puudub nähtav fookus.
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Keelevahetaja. CSS selector: `.language-switcher a, .language-switcher button`
@@ -447,29 +396,22 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.1.1 Non-text Content |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.1.1.1 Non-text Content |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-content> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Ostukorvi ikooni juures kuvatakse toodete kogus, kuid ekraanilugejale ei täpsustata, et number tähistab ostukorvis olevate toodete kogust. Osadel pakkumistel ei eristata uue ja vana hinna tähendust.
-- **Odavad kaubad:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Paginatsioon loeb ette ainult numbrid, kuid ei täpsusta, et tegemist on lehtedega.
-- **Toode:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge.
-- **Ostu vormistamine:** Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Ülevaates oleval pakendi ikoonil puudub ligipääsetav kirjeldus.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
+- [Avaleht](https://www.test.ee/): Ostukorvi ikooni juures kuvatakse toodete kogus, kuid ekraanilugejale ei täpsustata, et number tähistab ostukorvis olevate toodete kogust. Osadel pakkumistel ei eristata uue ja vana hinna tähendust.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Paginatsioon loeb ette ainult numbrid, kuid ei täpsusta, et tegemist on lehtedega.
+- [Toode](https://www.test.ee/toode): Ostukorvi koguse tähendus ei ole ekraanilugejale selge.
 - [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Ülevaates oleval pakendi ikoonil puudub ligipääsetav kirjeldus.
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Reklaambännerid. CSS selector: `.promo-banner img`
@@ -485,20 +427,16 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.1 Error Identification |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.3.3.1 Error Identification |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-identification> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Ostu vormistamine:** Vigase välja alla kuvatakse veateade, kuid väli ise ei ole visuaalselt eristatud.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Vigase välja alla kuvatakse veateade, kuid väli ise ei ole visuaalselt eristatud.
 
 ### Probleem
 {: .no_toc }
@@ -511,22 +449,18 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.2 Labels or Instructions |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.3.3.2 Labels or Instructions |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Ostu vormistamine:** Kohustuslike väljade ees on tärn (*), kuid puudub selgitus, mida see tähendab. Lehel on palju erineva kujundusega vorme ning osade vormide puhul ei ole aru saada, kas need on kohustuslikud või mitte.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Kohustuslike väljade ees on tärn (*), kuid puudub selgitus, mida see tähendab. Lehel on palju erineva kujundusega vorme ning osade vormide puhul ei ole aru saada, kas need on kohustuslikud või mitte.
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Kohustuslikud väljad ei ole alati selgelt eristatavad. CSS selector: `.checkout-form [required]`
@@ -539,20 +473,16 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.3.3 Error Suggestion |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.3.3.3 Error Suggestion |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Ostu vormistamine:** Veateadetes puuduvad parandamise soovitused.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Veateadetes puuduvad parandamise soovitused.
 
 ### Probleem
 {: .no_toc }
@@ -565,20 +495,16 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.3.1.1 Language of Page |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.3.1.1 Language of Page |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#language-of-page> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Sisutoimetaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Vene- ja ingliskeelses vaates on osa tekstidest tõlkimata.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
+- [Avaleht](https://www.test.ee/): Vene- ja ingliskeelses vaates on osa tekstidest tõlkimata.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
 - [Toode](https://www.test.ee/toode)
 - [Ostukorv](https://www.test.ee/ostukorv)
@@ -598,20 +524,16 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.2.2 Pause, Stop, Hide |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.2.2.2 Pause, Stop, Hide |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Avalehel on kasutusel karussell, mida ei ole võimalik peatada.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
+- [Avaleht](https://www.test.ee/): Avalehel on kasutusel karussell, mida ei ole võimalik peatada.
 
 ### Probleem
 {: .no_toc }
@@ -624,20 +546,16 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.2 Page Titled |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.2.4.2 Page Titled |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#page-titled> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Ostukorv:** Lehe tiitel on „test.ee“, mis ei anna teada, et tegemist on ostukorvi vaatega.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): Lehe tiitel on „test.ee“, mis ei anna teada, et tegemist on ostukorvi vaatega.
 
 ### Probleem
 {: .no_toc }
@@ -650,20 +568,16 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.1.3.5 Identify Input Purpose |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.1.3.5 Identify Input Purpose |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Ostu vormistamine:** Vormidel puudub `autocomplete` atribuut.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Vormidel puudub `autocomplete` atribuut.
 
 ### Probleem
 {: .no_toc }
@@ -676,28 +590,22 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.4.1.3 Status Messages |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §9.4.1.3 Status Messages |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#status-messages> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Otsingutulemuste puhul ei anta teada, mitu tulemust otsinguga leiti.
-- **Odavad kaubad:** Otsingutulemuste arvu ei teatata. Filtri rakendamisel ei anta automaatselt teada, mitu tulemust valikusse jäi.
-- **Ostukorv:** Otsingutulemuste arvu ei teatata. Toote eemaldamisel ostukorvist ei anta teada, et toode eemaldati. Koguse muutmisel ei teatata, et muudatus tehti ega mitu eset ostukorvi jäi.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
+- [Avaleht](https://www.test.ee/): Otsingutulemuste puhul ei anta teada, mitu tulemust otsinguga leiti.
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): Otsingutulemuste arvu ei teatata. Filtri rakendamisel ei anta automaatselt teada, mitu tulemust valikusse jäi.
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): Otsingutulemuste arvu ei teatata. Toote eemaldamisel ostukorvist ei anta teada, et toode eemaldati. Koguse muutmisel ei teatata, et muudatus tehti ega mitu eset ostukorvi jäi.
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Otsingutulemuste arvust ei teavitata. CSS selector: `.search-results-count`
@@ -711,58 +619,45 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §9.2.4.3 Focus Order |
+| Hindamise viis | automaatne |
+| [EN 310 549 viide] | §9.2.4.3 Focus Order |
 | WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-order> |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Toode:** Pärast sisselogimise nuppu liigub klaviatuuri fookus korraks jalusesse.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Toode](https://www.test.ee/toode)
+- [Toode](https://www.test.ee/toode): Pärast sisselogimise nuppu liigub klaviatuuri fookus korraks jalusesse.
 
 ### Probleem
 {: .no_toc }
 
 Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a`
 
----
-
-# Lisaleiud
-
 ## EN 301 549 §11.7 User Preferences
 
 | Väli | Väärtus |
 |---|---|
-| [EN 310 549 viide](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_20/en_301549v030101a.pdf) | §11.7 User Preferences |
+| Hindamise viis | käsitsi |
+| [EN 310 549 viide] | §11.7 User Preferences |
 | WCAG viide | Ei kohaldu. |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
-### Lühiselgitused
-{: .no_toc }
-
-- **Avaleht:** Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks.
-- **Ostukorv:** Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks ning märkeruutudel kaob oleku eristus.
-
 ### Esineb alamlehtedel
 {: .no_toc }
 
-- [Avaleht](https://www.test.ee/)
+- [Avaleht](https://www.test.ee/): Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad)
 - [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks ning märkeruutudel kaob oleku eristus.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
 - [Kontaktid](https://www.test.ee/kontaktid)
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Probleemid
+### Tehniline viide
 {: .no_toc }
 
 - Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
