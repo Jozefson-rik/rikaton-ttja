@@ -7,10 +7,11 @@ has_toc: true
 toc_sticky: true
 ---
 
-# veebilehe [test.ee](https://www.test.ee/) 2026 a. põhjaliku digiligipääsetavuse seire aruanne
+# Digiligipääsetavuse põhjaliku seire aruanne
 {: .no_toc }
 
-| Hindamise läbiviija | Toomas ja pojad OÜ|
+| Veebileht | [test.ee](https://www.test.ee/) |
+| Hindamise läbiviija | Toomas ja pojad OÜ |
 | Hindamise kuupäev | 26.08.2026 |
 | Tagasiside tähtaeg | 30.12.2026 |
 | Kontakt | [mingiemail@ttja.ee](mingiemail@ttja.ee) |
