@@ -160,11 +160,12 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 
 ## WCAG 2.1.1 Keyboard
 
-**EN 310 549 viide:**  
-§9.2.1.1 Keyboard
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#keyboard>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.1.1 Keyboard |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#keyboard> |
+| Mõju kasutajale | Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -188,11 +189,6 @@ Veebilehel tuvastati märkimisväärne arv digiligipääsetavuse probleeme, mis 
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Mõju kasutajale
-{: .no_toc }
-
-Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
-
 ### Probleemid
 {: .no_toc }
 
@@ -201,20 +197,16 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 - Mõned juhtelemendid ei ole klaviatuuriga kasutatavad. CSS selector: `.product-card__quick-action`
 - Osa elemente jäetakse vahele. CSS selector: `.main-navigation a, .header-actions button`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 2.4.1 Bypass Blocks
 
-**EN 310 549 viide:**  
-§9.2.4.1 Bypass Blocks
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.4.1 Bypass Blocks |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks> |
+| Mõju kasutajale | Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -233,30 +225,21 @@ Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga.
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Mõju kasutajale
-{: .no_toc }
-
-Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist.
-
 ### Probleem
 {: .no_toc }
 
 - Puudub ülehüppamislink põhisisu juurde. CSS selector: `.skip-link`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 1.3.1 Info and Relationships
 
-**EN 310 549 viide:**  
-§9.1.3.1 Info and Relationships
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.1.3.1 Info and Relationships |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships> |
+| Mõju kasutajale | Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -282,11 +265,6 @@ Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja 
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Mõju kasutajale
-{: .no_toc }
-
-Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
-
 ### Probleemid
 {: .no_toc }
 
@@ -295,20 +273,16 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 - Menüüdel puuduvad eristavad kirjeldused. CSS selector: `nav.main-navigation, nav.footer-navigation`
 - Dünaamilistest muudatustest ei teavitata. CSS selector: `.search-results, .cart-status`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 4.1.2 Name, Role, Value
 
-**EN 310 549 viide:**  
-§9.4.1.2 Name, Role, Value
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#name-role-value>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.4.1.2 Name, Role, Value |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#name-role-value> |
+| Mõju kasutajale | Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -330,11 +304,6 @@ Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda.
 - [Juhend](https://www.test.ee/juhend)
 - [Kinkekaart](https://www.test.ee/kinkekaart)
 
-### Mõju kasutajale
-{: .no_toc }
-
-Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
-
 ### Probleemid
 {: .no_toc }
 
@@ -343,22 +312,18 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Märkeruutude olekut ei edastata. CSS selector: `.filter-panel input[type="checkbox"]`
 - Akordionide olekuid ei loeta ette. CSS selector: `.accordion__trigger`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 # Kõrge prioriteediga probleemid
 
 ## WCAG 1.4.3 Contrast (Minimum)
 
-**EN 310 549 viide:**  
-§9.1.4.3 Contrast (Minimum)
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.1.4.3 Contrast (Minimum) |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -392,20 +357,16 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Lingid. CSS selector: `main a`
 - Menüüelemendid. CSS selector: `.main-navigation__link`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 1.4.11 Non-text Contrast
 
-**EN 310 549 viide:**  
-§9.1.4.11 Non-text Contrast
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.1.4.11 Non-text Contrast |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -434,20 +395,16 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Sisselogimise nupud. CSS selector: `.login-dialog button`
 - Muud kasutajaliidese komponendid ei eristu taustast piisavalt. CSS selector: `.button--secondary, .icon-button`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 2.4.7 Focus Visible
 
-**EN 310 549 viide:**  
-§9.2.4.7 Focus Visible
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#focus-visible>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.4.7 Focus Visible |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-visible> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -479,20 +436,16 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Märkeruudud. CSS selector: `input[type="checkbox"]`
 - Raadionupud. CSS selector: `input[type="radio"]`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 1.1.1 Non-text Content
 
-**EN 310 549 viide:**  
-§9.1.1.1 Non-text Content
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#non-text-content>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.1.1.1 Non-text Content |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#non-text-content> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -519,23 +472,18 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 - Ostukorvi ikoon. CSS selector: `.header-cart__icon`
 - Visuaalset infot sisaldavad pildid ilma piisava alternatiivkirjelduseta. CSS selector: `img:not([alt]), img[alt=""]`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja  
-✅ Sisutoimetaja
-
 ---
 
 # Keskmise prioriteediga probleemid
 
 ## WCAG 3.3.1 Error Identification
 
-**EN 310 549 viide:**  
-§9.3.3.1 Error Identification
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#error-identification>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.3.3.1 Error Identification |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-identification> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -552,20 +500,16 @@ Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru.
 
 Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 3.3.2 Labels or Instructions
 
-**EN 310 549 viide:**  
-§9.3.3.2 Labels or Instructions
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.3.3.2 Labels or Instructions |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -584,21 +528,16 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 - Tärni (*) tähendust ei selgitata. CSS selector: `.checkout-form .required-marker`
 - Kasutajale ei ole alati selge, millist infot temalt oodatakse.
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja  
-✅ Sisutoimetaja
-
 ---
 
 ## WCAG 3.3.3 Error Suggestion
 
-**EN 310 549 viide:**  
-§9.3.3.3 Error Suggestion
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.3.3.3 Error Suggestion |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -615,20 +554,16 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 3.1.1 Language of Page
 
-**EN 310 549 viide:**  
-§9.3.1.1 Language of Page
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#language-of-page>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.3.1.1 Language of Page |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#language-of-page> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Sisutoimetaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -652,20 +587,16 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 
 Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
-### Vastutaja
-{: .no_toc }
-
-✅ Sisutoimetaja
-
 ---
 
 ## WCAG 2.2.2 Pause, Stop, Hide
 
-**EN 310 549 viide:**  
-§9.2.2.2 Pause, Stop, Hide
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.2.2 Pause, Stop, Hide |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -682,20 +613,16 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 2.4.2 Page Titled
 
-**EN 310 549 viide:**  
-§9.2.4.2 Page Titled
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#page-titled>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.4.2 Page Titled |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#page-titled> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -712,20 +639,16 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 1.3.5 Identify Input Purpose
 
-**EN 310 549 viide:**  
-§9.1.3.5 Identify Input Purpose
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.1.3.5 Identify Input Purpose |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -742,20 +665,16 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 4.1.3 Status Messages
 
-**EN 310 549 viide:**  
-§9.4.1.3 Status Messages
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#status-messages>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.4.1.3 Status Messages |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#status-messages> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -781,20 +700,16 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 - Toote lisamisest ostukorvi ei teavitata. CSS selector: `.add-to-cart-button`
 - Toote eemaldamisest ostukorvist ei teavitata. CSS selector: `.cart-item__remove`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 ## WCAG 2.4.3 Focus Order
 
-**EN 310 549 viide:**  
-§9.2.4.3 Focus Order
-
-**WCAG viide:**  
-<https://www.w3.org/WAI/WCAG22/quickref/#focus-order>
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §9.2.4.3 Focus Order |
+| WCAG viide | <https://www.w3.org/WAI/WCAG22/quickref/#focus-order> |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -811,19 +726,18 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a`
 
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
-
 ---
 
 # Lisaleiud
 
 ## EN 301 549 §11.7 User Preferences
 
-**EN 310 549 viide:**  
-§11.7 User Preferences
+| Väli | Väärtus |
+|---|---|
+| EN 310 549 viide | §11.7 User Preferences |
+| WCAG viide | Ei kohaldu. |
+| Mõju kasutajale | Ei ole eraldi välja toodud. |
+| Vastutaja | ✅ Arendaja |
 
 ### Lühiselgitused
 {: .no_toc }
@@ -849,11 +763,6 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 - Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
 - Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks. CSS selector: `.button, .form-control, .product-card`
 - Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg`
-
-### Vastutaja
-{: .no_toc }
-
-✅ Arendaja
 
 ---
 
