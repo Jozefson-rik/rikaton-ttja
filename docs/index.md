@@ -164,6 +164,26 @@ toc_sticky: true
 		cursor: pointer;
 	}
 
+	.report-section-toggle {
+		width: 100%;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		cursor: pointer;
+	}
+
+	.report-section-toggle:hover {
+		text-decoration: underline;
+	}
+
+	.report-section-toggle:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
 	.audit-finding-toggle:hover span:first-child {
 		text-decoration: underline;
 	}
@@ -208,8 +228,9 @@ toc_sticky: true
 	};
 
 	const setupAuditFindingToggles = () => {
-		const headings = Array.from(document.querySelectorAll(".markdown-body h2, main h2, .main-content h2"));
+		const headings = Array.from(document.querySelectorAll(".markdown-body h1, .markdown-body h2, main h1, main h2, .main-content h1, .main-content h2"));
 		const issueHeadingPattern = /^(WCAG|EN 301 549)/;
+		const foldableSectionPattern = /^(Lähteandmed|Kokkuvõte)$/;
 
 		headings.forEach((heading, index) => {
 			if (heading.querySelector(".audit-finding-toggle")) {
@@ -218,7 +239,10 @@ toc_sticky: true
 
 			const title = heading.textContent.replace(/Anchor\s*$/, "").trim();
 
-			if (!issueHeadingPattern.test(title)) {
+			const isFinding = heading.tagName === "H2" && issueHeadingPattern.test(title);
+			const isFoldableSection = heading.tagName === "H1" && foldableSectionPattern.test(title);
+
+			if (!isFinding && !isFoldableSection) {
 				return;
 			}
 
@@ -228,7 +252,9 @@ toc_sticky: true
 
 			let nextElement = heading.nextElementSibling;
 
-			while (nextElement && !["H1", "H2"].includes(nextElement.tagName)) {
+			const boundaryTags = heading.tagName === "H1" ? ["H1"] : ["H1", "H2"];
+
+			while (nextElement && !boundaryTags.includes(nextElement.tagName)) {
 				const elementToMove = nextElement;
 				nextElement = nextElement.nextElementSibling;
 				panel.appendChild(elementToMove);
@@ -237,7 +263,7 @@ toc_sticky: true
 			heading.after(panel);
 
 			const button = document.createElement("button");
-			button.className = "audit-finding-toggle";
+			button.className = isFinding ? "audit-finding-toggle" : "report-section-toggle";
 			button.type = "button";
 			button.setAttribute("aria-expanded", "true");
 			button.setAttribute("aria-controls", panel.id);
@@ -286,7 +312,7 @@ toc_sticky: true
 				});
 
 				foldAllButton.setAttribute("aria-expanded", String(shouldExpand));
-				foldAllButton.textContent = shouldExpand ? "Voldi kõik kokku" : "Ava kõik";
+				foldAllButton.textContent = shouldExpand ? "Sulge kõik" : "Ava kõik";
 			});
 		}
 
@@ -298,11 +324,9 @@ toc_sticky: true
 		}
 
 		const copyStatementButton = document.querySelector("#copy-statement-button");
-		const statementHeading = Array.from(document.querySelectorAll("h1")).find((heading) =>
-			heading.textContent.trim().replace(/Anchor\s*$/, "") === "Teatise näidis"
-		);
+		const statementHeading = copyStatementButton?.previousElementSibling;
 
-		if (copyStatementButton && statementHeading) {
+		if (copyStatementButton && statementHeading?.tagName === "H1") {
 			copyStatementButton.addEventListener("click", async () => {
 				const siblings = Array.from(statementHeading.parentElement.children);
 				const headingIndex = siblings.indexOf(statementHeading);
@@ -356,7 +380,7 @@ toc_sticky: true
 | Kontakt | [mingiemail@ttja.ee](mailto:mingiemail@ttja.ee) |
 | Standard | EN 301 549 V3.2.1 / WCAG |
 | Kontrolli liik | Põhjalik audit |
-| Testitud alamlehti | 8<br>[Avaleht](https://www.test.ee/)<br>[Odavad kaubad](https://www.test.ee/odavad-kaubad)<br>[Toode](https://www.test.ee/toode)<br>[Ostukorv](https://www.test.ee/ostukorv)<br>[Ostu vormistamine](https://www.test.ee/ostu-vormistamine)<br>[Kontaktid](https://www.test.ee/kontaktid)<br>[Juhend](https://www.test.ee/juhend)<br>[Kinkekaart](https://www.test.ee/kinkekaart) |
+| Testitud alamlehti | 8 lehte<br>[Avaleht](https://www.test.ee/)<br>[Odavad kaubad](https://www.test.ee/odavad-kaubad)<br>[Toode](https://www.test.ee/toode)<br>[Ostukorv](https://www.test.ee/ostukorv)<br>[Ostu vormistamine](https://www.test.ee/ostu-vormistamine)<br>[Kontaktid](https://www.test.ee/kontaktid)<br>[Juhend](https://www.test.ee/juhend)<br>[Kinkekaart](https://www.test.ee/kinkekaart) |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
 
 # Kokkuvõte
