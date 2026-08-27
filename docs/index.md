@@ -224,6 +224,11 @@ toc_sticky: true
 
 		document.querySelectorAll(".markdown-body a").forEach((link) => {
 			const linkText = link.textContent.trim();
+
+			if (link.closest(".report-toc")) {
+				return;
+			}
+
 			link.setAttribute("target", "_blank");
 			link.setAttribute("rel", "noopener noreferrer");
 
