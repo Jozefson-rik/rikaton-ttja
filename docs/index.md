@@ -10,13 +10,10 @@ toc_sticky: true
 # Digiligipääsetavuse põhjaliku seire aruanne
 {: .no_toc }
 
-| Veebileht | [test.ee](https://www.test.ee/) |
-| Hindamise läbiviija | Toomas ja pojad OÜ |
-| Hindamise kuupäev | 26.08.2026 |
-| Tagasiside tähtaeg | 30.12.2026 |
-| Kontakt | [mingiemail@ttja.ee](mingiemail@ttja.ee) |
-
-<a class="download-button" href="https://raw.githubusercontent.com/Jozefson-rik/rikaton-ttja/main/docs/index.md" download>Laadi aruanne alla Markdown-failina</a>
+<div class="report-actions">
+	<a class="download-button" href="https://raw.githubusercontent.com/Jozefson-rik/rikaton-ttja/main/docs/index.md" download>Laadi aruanne alla Markdown-failina</a>
+	<button class="fold-all-button" type="button" id="fold-all-button" aria-expanded="true">Ava/Sulge kõik</button>
+</div>
 
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
@@ -66,6 +63,38 @@ toc_sticky: true
 	}
 
 	.download-button:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
+	.report-actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		margin: 1rem 0;
+	}
+
+	.report-actions .download-button {
+		margin: 0;
+	}
+
+	.fold-all-button {
+		padding: 0.6rem 0.9rem;
+		border: 1px solid currentColor;
+		border-radius: 4px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	.fold-all-button:hover {
+		text-decoration: underline;
+	}
+
+	.fold-all-button:focus-visible {
 		outline: 3px solid currentColor;
 		outline-offset: 4px;
 	}
@@ -182,6 +211,29 @@ toc_sticky: true
 				icon.textContent = expanded ? "+" : "−";
 			});
 		});
+
+		const foldAllButton = document.querySelector("#fold-all-button");
+		if (foldAllButton) {
+			foldAllButton.addEventListener("click", () => {
+				const panels = Array.from(document.querySelectorAll(".audit-finding-panel"));
+				const shouldExpand = panels.some((panel) => panel.hidden);
+
+				panels.forEach((panel) => {
+					panel.hidden = !shouldExpand;
+				});
+
+				document.querySelectorAll(".audit-finding-toggle").forEach((toggle) => {
+					toggle.setAttribute("aria-expanded", String(shouldExpand));
+					const icon = toggle.querySelector(".audit-finding-toggle__icon");
+					if (icon) {
+						icon.textContent = shouldExpand ? "−" : "+";
+					}
+				});
+
+				foldAllButton.setAttribute("aria-expanded", String(shouldExpand));
+				foldAllButton.textContent = shouldExpand ? "Voldi kõik kokku" : "Ava kõik";
+			});
+		}
 	};
 
 	if (document.readyState === "loading") {
@@ -200,7 +252,11 @@ toc_sticky: true
 # Aruande lähteandmed
 
 | Hindamise viis | käsitsi |
-| Veebileht | test.ee |
+| Veebileht | [test.ee](https://www.test.ee/) |
+| Hindamise läbiviija | Toomas ja pojad OÜ |
+| Hindamise kuupäev | 26.08.2026 |
+| Tagasiside tähtaeg | 30.12.2026 |
+| Kontakt | [mingiemail@ttja.ee](mailto:mingiemail@ttja.ee) |
 | Standard | EN 301 549 V3.2.1 / WCAG |
 | Kontrolli liik | Põhjalik audit |
 | Testitud alamlehti | 8 |
@@ -210,26 +266,26 @@ toc_sticky: true
 
 Auditi käigus kontrolliti veebilehe [test.ee](https://www.test.ee/) 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel. Tuvastati **20 nõuet, mille puhul esines vähemalt üks mittevastavus**.
 
-Kõige suurema mõjuga riskid on seotud klaviatuuriga navigeerimise, ekraanilugeja toe, fookuse nähtavuse, kasutajaliidese olekuteabe, semantilise struktuuri ja kontrastsusega. Need võivad takistada veebilehe iseseisvat kasutamist pimedatel ja vaegnägijatel, liikumispuudega kasutajatel ning inimestel, kes kasutavad klaviatuuri, suurendust või kõrgkontrastset kuvarežiimi.
-
 Tööde järjekord peaks olema järgmine: esmalt kõrvaldada põhifunktsioone takistavad kriitilised vead, seejärel parandada kontrastsuse ja fookuse probleemid ning lõpuks viimistleda sisu, tõlked ja teatis. Allolev nimekiri on mõeldud otse tööülesannete jagamiseks.
+
+**Kui dokumendis pole alamlehti või WCAG nõudeid välja toodud, siis nende osas vigu ei tuvastatud.**
 
 ## TODO tööde jagamiseks
 
-| Prioriteet | Tööülesanne | Vastutaja | Tähtaeg | Oodatav tulemus |
-|---|---|---|---|---|
-| 1 | Parandada klaviatuurifookus, sisselogimise dialoog, otsingusoovitused ja vahelejäävad elemendid. | Arendaja | 30 päeva | Kõiki põhifunktsioone saab kasutada ainult klaviatuuriga. |
-| 2 | Lisada põhisisuni viiv ülehüppamislink ning korrastada fookuse järjekord. | Arendaja | 30 päeva | Kasutaja jõuab kiiresti põhisisuni ja fookus liigub loogiliselt. |
-| 3 | Parandada semantiline HTML, pealkirjatasemed, vormisildid ja ARIA olekuteave. | Arendaja | 30 päeva | Ekraanilugeja saab lehe struktuurist ja olekutest aru. |
-| 4 | Parandada teksti, linkide, nuppude, vormiväljade ja ikoonide kontrastsus. | Arendaja | 30 päeva | Visuaalsed ja mitte-tekstuaalsed komponendid eristuvad piisavalt. |
-| 5 | Lisada puuduvad alternatiivtekstid ning kirjeldada ikoonide ja toodete visuaalne info. | Arendaja ja sisutoimetaja | 90 päeva | Informatiivne sisu on kättesaadav ka ilma visuaalse tajuta. |
-| 6 | Parandada vormide veateated, juhised, kohustuslike väljade tähistus ja `autocomplete` atribuudid. | Arendaja ja sisutoimetaja | 90 päeva | Vormide täitmine ja vigade parandamine on arusaadav. |
-| 7 | Lisada olekuteated otsingule, filtritele ja ostukorvi tegevustele. | Arendaja | 90 päeva | Kasutaja saab teada dünaamiliste tegevuste tulemusest. |
-| 8 | Kontrollida ja parandada vene- ja ingliskeelsete vaadete tõlked. | Sisutoimetaja | 90 päeva | Kõik avalikud vaated sisaldavad täielikku ja ühtset sisu. |
-| 9 | Uuendada ligipääsetavuse teatist vastavalt parandatud olukorrale. | Arendaja ja sisutoimetaja | 180 päeva | Avalik teatis kajastab tegelikku vastavuse taset. |
-| 10 | Teha kordusaudit kõigil 8 alamlehel ja kinnitada paranduste toimivus. | Arendaja ja hindaja | 180 päeva | Parandused on kontrollitud ja allesjäänud riskid dokumenteeritud. |
-
 Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekraanilugejaga ning märkida tulemus tööde nimekirjas. Aruande leiuplokid sisaldavad konkreetseid standardiviiteid, mõjutatud alamlehti ja CSS-valijaid, mida saab kasutada arenduspiletite koostamisel.
+
+| Prioriteet | Tegevus | Oodatav tulemus |
+|---|---|---|
+| 1 | Parandada klaviatuurifookus, sisselogimise dialoog, otsingusoovitused ja vahelejäävad elemendid. | Kõiki põhifunktsioone saab kasutada ainult klaviatuuriga. |
+| 2 | Lisada põhisisuni viiv ülehüppamislink ning korrastada fookuse järjekord. | Kasutaja jõuab kiiresti põhisisuni ja fookus liigub loogiliselt. |
+| 3 | Parandada semantiline HTML, pealkirjatasemed, vormisildid ja ARIA olekuteave. | Ekraanilugeja saab lehe struktuurist ja olekutest aru. |
+| 4 | Parandada teksti, linkide, nuppude, vormiväljade ja ikoonide kontrastsus. | Visuaalsed ja mitte-tekstuaalsed komponendid eristuvad piisavalt. |
+| 5 | Lisada puuduvad alternatiivtekstid ning kirjeldada ikoonide ja toodete visuaalne info. | Informatiivne sisu on kättesaadav ka ilma visuaalse tajuta. |
+| 6 | Parandada vormide veateated, juhised, kohustuslike väljade tähistus ja `autocomplete` atribuudid. | Vormide täitmine ja vigade parandamine on arusaadav. |
+| 7 | Lisada olekuteated otsingule, filtritele ja ostukorvi tegevustele. | Kasutaja saab teada dünaamiliste tegevuste tulemusest. |
+| 8 | Kontrollida ja parandada vene- ja ingliskeelsete vaadete tõlked. | Kõik avalikud vaated sisaldavad täielikku ja ühtset sisu. |
+| 9 | Uuendada ligipääsetavuse teatist vastavalt parandatud olukorrale. | Avalik teatis kajastab tegelikku vastavuse taset. |
+| 10 | Teha kordusaudit kõigil 8 alamlehel ja kinnitada paranduste toimivus. | Parandused on kontrollitud ja allesjäänud riskid dokumenteeritud. |
 
 ---
 
@@ -248,11 +304,11 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 - [Avaleht](https://www.test.ee/): Klaviatuuri fookus ei liigu sisselogimise aknasse, vaid jääb taustal liikuma. Otsingusoovitused avanevad automaatselt ning neid ei ole võimalik vahele jätta. Jaluses jäetakse partnerite logod vahele.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Lisaks sisselogimise akna ja otsingusoovituste probleemile ei liigu fookus sorteerimise valikule.
-- [Toode](https://www.test.ee/toode)
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Klaviatuuri fookus jääb sisselogimise akna avamisel taustale liikuma ning otsingusoovitusi ei saa vahele jätta.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Lisaks üldistele klaviatuuriprobleemidele ei liigu fookus aja valiku aknale ning aega ei saa sisestusväljale trükkida.
 - [Kontaktid](https://www.test.ee/kontaktid): Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
-- [Juhend](https://www.test.ee/juhend)
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
 - [Kinkekaart](https://www.test.ee/kinkekaart): Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele.
 
 ### Tehniline viide
@@ -277,13 +333,13 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 {: .no_toc }
 
 - [Avaleht](https://www.test.ee/): Lehe päist ei ole võimalik vahele jätta.
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): vt. eelmist kirjeldust
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
+- [Ostukorv](https://www.test.ee/ostukorv): vt. eelmist kirjeldust
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): vt. eelmist kirjeldust
+- [Kontaktid](https://www.test.ee/kontaktid): vt. eelmist kirjeldust
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Probleem
 {: .no_toc }
@@ -336,11 +392,11 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 - [Avaleht](https://www.test.ee/): Menüüd ei anna olekuteavet: aktiivne menüüpunkt ei ole tuvastatav ning alamenüü avatud või suletud olekut ei edastata.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Menüüd ei anna olekuteavet ning märkeruutude puhul ei loeta ette, kas need on märgistatud või mitte.
 - [Toode](https://www.test.ee/toode): Menüüd ei anna olekuteavet ning akordionide avatud või suletud olekut ei edastata.
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): vt. eelmist kirjeldust
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Menüüd ei anna olekuteavet; aktiivne menüüpunkt ja alamenüü avatud või suletud olek ei ole abitehnoloogiale selged.
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Kontaktid](https://www.test.ee/kontaktid): vt. eelmist kirjeldust
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
@@ -367,12 +423,12 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 - [Avaleht](https://www.test.ee/): Küpsiste akna sinise nupu ja valge teksti kontrastsus on 1.5:1. Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1, otsinguvälja placeholder'i kontrastsus 3:1 ning ostukorvi halli teksti kontrastsus 2.5:1.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on leivapuru kontrastsus 3.5:1, toote hinna kontrastsus 3.5:1 ning sildi sinise tausta ja valge teksti kontrastsus 2.5:1.
-- [Toode](https://www.test.ee/toode)
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on „Teade“ välja placeholder'i kontrastsus 1.5:1, nuppude sinise teksti kontrastsus 4:1 ning vana läbikriipsutatud hinna kontrastsus 3.5:1.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Tagasi nupu hover-oleku kontrastsus on 4:1 ning ülevaates on halli teksti kontrastsus 3.74:1.
 - [Kontaktid](https://www.test.ee/kontaktid): Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
 - [Juhend](https://www.test.ee/juhend): Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi.
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
@@ -398,13 +454,13 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 {: .no_toc }
 
 - [Avaleht](https://www.test.ee/): „Logi sisse“ nupu tausta ja lehe tausta kontrastsus on 2:1. Ostukorvi nupu sinise tausta ja lehe tausta kontrastsus on 1.5:1.
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): vt. eelmist kirjeldust
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Lisaks on sisestusväljade piirjoone ja tausta kontrastsus 1.5:1.
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): vt. eelmist kirjeldust
 - [Kontaktid](https://www.test.ee/kontaktid): Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Linkide teksti ja tausta kontrastsus on 4.36:1.
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
@@ -429,12 +485,12 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 - [Avaleht](https://www.test.ee/): Keele muutmise menüül, osadel ikoonidel ja osadel reklaamidel puudub nähtav fookus või see on halvasti eristatav.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. „Lisa ostukorvi“ nupul puudub samuti nähtav fookus.
-- [Toode](https://www.test.ee/toode)
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus.
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Keele muutmise menüül, osadel ikoonidel, märkeruutudel ja raadionuppudel puudub nähtav fookus.
 - [Kontaktid](https://www.test.ee/kontaktid): Keele muutmise menüül puudub nähtav fookus.
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
@@ -461,7 +517,7 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 - [Avaleht](https://www.test.ee/): Ostukorvi ikooni juures kuvatakse toodete kogus, kuid ekraanilugejale ei täpsustata, et number tähistab ostukorvis olevate toodete kogust. Osadel pakkumistel ei eristata uue ja vana hinna tähendust.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Paginatsioon loeb ette ainult numbrid, kuid ei täpsusta, et tegemist on lehtedega.
 - [Toode](https://www.test.ee/toode): Ostukorvi koguse tähendus ei ole ekraanilugejale selge.
-- [Ostukorv](https://www.test.ee/ostukorv)
+- [Ostukorv](https://www.test.ee/ostukorv): vt. eelmist kirjeldust
 - [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Ülevaates oleval pakendi ikoonil puudub ligipääsetav kirjeldus.
 
 ### Tehniline viide
@@ -550,13 +606,13 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 {: .no_toc }
 
 - [Avaleht](https://www.test.ee/): Vene- ja ingliskeelses vaates on osa tekstidest tõlkimata.
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
-- [Ostukorv](https://www.test.ee/ostukorv)
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): vt. eelmist kirjeldust
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
+- [Ostukorv](https://www.test.ee/ostukorv): vt. eelmist kirjeldust
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): vt. eelmist kirjeldust
+- [Kontaktid](https://www.test.ee/kontaktid): vt. eelmist kirjeldust
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Probleem
 {: .no_toc }
@@ -638,9 +694,9 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 - [Avaleht](https://www.test.ee/): Otsingutulemuste puhul ei anta teada, mitu tulemust otsinguga leiti.
 - [Odavad kaubad](https://www.test.ee/odavad-kaubad): Otsingutulemuste arvu ei teatata. Filtri rakendamisel ei anta automaatselt teada, mitu tulemust valikusse jäi.
-- [Toode](https://www.test.ee/toode)
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Otsingutulemuste arvu ei teatata. Toote eemaldamisel ostukorvist ei anta teada, et toode eemaldati. Koguse muutmisel ei teatata, et muudatus tehti ega mitu eset ostukorvi jäi.
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
@@ -682,13 +738,13 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 {: .no_toc }
 
 - [Avaleht](https://www.test.ee/): Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks.
-- [Odavad kaubad](https://www.test.ee/odavad-kaubad)
-- [Toode](https://www.test.ee/toode)
+- [Odavad kaubad](https://www.test.ee/odavad-kaubad): vt. eelmist kirjeldust
+- [Toode](https://www.test.ee/toode): vt. eelmist kirjeldust
 - [Ostukorv](https://www.test.ee/ostukorv): Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks ning märkeruutudel kaob oleku eristus.
-- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine)
-- [Kontaktid](https://www.test.ee/kontaktid)
-- [Juhend](https://www.test.ee/juhend)
-- [Kinkekaart](https://www.test.ee/kinkekaart)
+- [Ostu vormistamine](https://www.test.ee/ostu-vormistamine): vt. eelmist kirjeldust
+- [Kontaktid](https://www.test.ee/kontaktid): vt. eelmist kirjeldust
+- [Juhend](https://www.test.ee/juhend): vt. eelmist kirjeldust
+- [Kinkekaart](https://www.test.ee/kinkekaart): vt. eelmist kirjeldust
 
 ### Tehniline viide
 {: .no_toc }
