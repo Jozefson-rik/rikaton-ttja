@@ -15,6 +15,8 @@ toc_sticky: true
 	<button class="fold-all-button" type="button" id="fold-all-button" aria-expanded="true">Ava/Sulge kõik</button>
 </div>
 
+<button class="move-to-top-button" type="button" id="move-to-top-button" aria-label="Liigu lehe algusesse">↑</button>
+
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
 
@@ -95,6 +97,54 @@ toc_sticky: true
 	}
 
 	.fold-all-button:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
+	.move-to-top-button {
+		position: fixed;
+		right: 1.5rem;
+		bottom: 1.5rem;
+		z-index: 10;
+		width: 2.75rem;
+		height: 2.75rem;
+		border: 1px solid #003087;
+		border-radius: 50%;
+		background: #ffffff;
+		color: #003087;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1;
+		cursor: pointer;
+	}
+
+	.move-to-top-button:hover {
+		background: #003087;
+		color: #ffffff;
+	}
+
+	.move-to-top-button:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
+	.copy-statement-button {
+		margin: 0.5rem 0 1rem;
+		padding: 0.6rem 0.9rem;
+		border: 1px solid currentColor;
+		border-radius: 4px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	.copy-statement-button:hover {
+		text-decoration: underline;
+	}
+
+	.copy-statement-button:focus-visible {
 		outline: 3px solid currentColor;
 		outline-offset: 4px;
 	}
@@ -234,6 +284,48 @@ toc_sticky: true
 				foldAllButton.textContent = shouldExpand ? "Voldi kõik kokku" : "Ava kõik";
 			});
 		}
+
+		const moveToTopButton = document.querySelector("#move-to-top-button");
+		if (moveToTopButton) {
+			moveToTopButton.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+		}
+
+		const copyStatementButton = document.querySelector("#copy-statement-button");
+		const statementHeading = Array.from(document.querySelectorAll("h1")).find((heading) =>
+			heading.textContent.trim().replace(/Anchor\s*$/, "") === "Teatise näidis"
+		);
+
+		if (copyStatementButton && statementHeading) {
+			copyStatementButton.addEventListener("click", async () => {
+				const siblings = Array.from(statementHeading.parentElement.children);
+				const headingIndex = siblings.indexOf(statementHeading);
+				const content = siblings
+					.slice(headingIndex + 1)
+					.filter((element) => element !== copyStatementButton)
+					.map((element) => element.innerText.trim())
+					.filter(Boolean)
+					.join("\n\n");
+				const textToCopy = `${statementHeading.textContent.replace(/Anchor\s*$/, "").trim()}\n\n${content}`;
+
+				try {
+					await navigator.clipboard.writeText(textToCopy);
+				} catch {
+					const textArea = document.createElement("textarea");
+					textArea.value = textToCopy;
+					document.body.appendChild(textArea);
+					textArea.select();
+					document.execCommand("copy");
+					textArea.remove();
+				}
+
+				copyStatementButton.textContent = "Teatis kopeeritud";
+				setTimeout(() => {
+					copyStatementButton.textContent = "Kopeeri teatis";
+				}, 2000);
+			});
+		}
 	};
 
 	if (document.readyState === "loading") {
@@ -249,7 +341,7 @@ toc_sticky: true
 
 ---
 
-# Aruande lähteandmed
+# Lähteandmed
 
 | Hindamise viis | käsitsi |
 | Veebileht | [test.ee](https://www.test.ee/) |
@@ -261,6 +353,17 @@ toc_sticky: true
 | Kontrolli liik | Põhjalik audit |
 | Testitud alamlehti | 8 |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
+
+TODO: TEKSTILINE KIRJELDUS, MILLE JÄRGI MIS LEHEKÜLGI VALITI + AUTOMAATIKA/MANUAAL TESTIDE KATTUVUS.
+Lehtede valim:
+Avaleht
+Odavad kaubad
+Toode
+Ostukorv
+Ostu vormistamine
+Kontaktid
+Juhend
+Kinkekaart
 
 # Kokkuvõte
 
@@ -296,7 +399,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.2.1.1 Keyboard |
 | WCAG viide | [WCAG 2.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.1.1&id=wcag-2.1.1-2.1.1-success-criterion-3496a62ea785) |
-| Mõju kasutajale | Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -326,7 +428,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.2.4.1 Bypass Blocks |
 | WCAG viide | [WCAG 2.4.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.1&id=wcag-2.4.1-2.4.1-success-criterion-03fff1a1bbfe) |
-| Mõju kasutajale | Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -353,7 +454,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.1.3.1 Info and Relationships |
 | WCAG viide | [WCAG 1.3.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.3.1&id=wcag-1.3.1-1.3.1-success-criterion-4f68d524e4c2) |
-| Mõju kasutajale | Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -383,7 +483,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.4.1.2 Name, Role, Value |
 | WCAG viide | [WCAG 4.1.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=4.1.2&id=wcag-4.1.2-4.1.2-success-criterion-260b752b491b) |
-| Mõju kasutajale | Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -415,7 +514,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.1.4.3 Contrast (Minimum) |
 | WCAG viide | [WCAG 1.4.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.4.3&id=wcag-1.4.3-1.4.3-success-criterion-06c311b42c2d) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -447,7 +545,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.1.4.11 Non-text Contrast |
 | WCAG viide | [WCAG 1.4.11](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.4.11&id=wcag-1.4.11-1.4.11-success-criterion-7d1acb39f7f0) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -477,7 +574,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.2.4.7 Focus Visible |
 | WCAG viide | [WCAG 2.4.7](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.7&id=wcag-2.4.7-2.4.7-success-criterion-74ab3972e1d1) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -508,7 +604,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.1.1.1 Non-text Content |
 | WCAG viide | [WCAG 1.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.1.1&id=wcag-1.1.1-1.1.1-success-criterion-18548a3b09d7) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
 ### Esineb alamlehtedel
@@ -537,7 +632,6 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.3.3.1 Error Identification |
 | WCAG viide | [WCAG 3.3.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.1&id=wcag-3.3.1-3.3.1-success-criterion-cb1a373df5d2) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -557,7 +651,6 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.3.3.2 Labels or Instructions |
 | WCAG viide | [WCAG 3.3.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.2&id=wcag-3.3.2-3.3.2-success-criterion-e66da61d25f3) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
 
 ### Esineb alamlehtedel
@@ -579,7 +672,6 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.3.3.3 Error Suggestion |
 | WCAG viide | [WCAG 3.3.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.3&id=wcag-3.3.3-3.3.3-success-criterion-cb5084410615) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -599,7 +691,6 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.3.1.1 Language of Page |
 | WCAG viide | [WCAG 3.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.1.1&id=wcag-3.1.1-3.1.1-success-criterion-1fcbac084231) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Sisutoimetaja |
 
 ### Esineb alamlehtedel
@@ -626,7 +717,6 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.2.2.2 Pause, Stop, Hide |
 | WCAG viide | [WCAG 2.2.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.2.2&id=wcag-2.2.2-2.2.2-success-criterion-f1204e1d633d) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -646,7 +736,6 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.2.4.2 Page Titled |
 | WCAG viide | [WCAG 2.4.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.2&id=wcag-2.4.2-2.4.2-success-criterion-029376ef6914) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -666,7 +755,6 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.1.3.5 Identify Input Purpose |
 | WCAG viide | [WCAG 1.3.5](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.3.5&id=wcag-1.3.5-1.3.5-success-criterion-fb80b741698f) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -686,7 +774,6 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §9.4.1.3 Status Messages |
 | WCAG viide | [WCAG 4.1.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=4.1.3&id=wcag-4.1.3-4.1.3-success-criterion-bc7dc23b0a4f) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -713,7 +800,6 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 | Hindamise viis | automaatne |
 | [EN 301 549 viide] | §9.2.4.3 Focus Order |
 | WCAG viide | [WCAG 2.4.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.3&id=wcag-2.4.3-2.4.3-success-criterion-9415829080b3) |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -731,7 +817,6 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 | Hindamise viis | käsitsi |
 | [EN 301 549 viide] | §11.7 User Preferences |
 | WCAG viide | Ei kohaldu. |
-| Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
 
 ### Esineb alamlehtedel
@@ -757,57 +842,17 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 # Vastutusalad
 
-## Arendaja
-
-- Klaviatuurikasutus
-- Kontrastsus
-- Fookuse haldus
-- ARIA atribuudid
-- Semantiline HTML
-- Olekuteated
-- Ülehüppamislink
-- Autocomplete atribuudid
-
-## Sisutoimetaja
-
-- Alternatiivtekstid
-- Tõlked
-- Veatekstid
-- Lehtede pealkirjad
-
-## Jagatud vastutus
-
-- Ligipääsetavuse teatis
-- Karussellid
-- Vormide kasutusloogika
-
----
-
-# Soovitatud tegevuskava
-
-## 30 päeva
-
-1. Parandada WCAG 2.1.1 Keyboard puudused.
-2. Lisada ülehüppamislink.
-3. Lahendada kriitilised ekraanilugeja probleemid.
-4. Parandada kontrastsusvead.
-
-## 90 päeva
-
-1. Parandada vormide kasutatavus.
-2. Lisada puuduvad alternatiivtekstid.
-3. Täiendada olekuteadete tuge.
-4. Lahendada keele- ja tõlkeprobleemid.
-
-## 180 päeva
-
-1. Uuendada ligipääsetavuse teatis.
-2. Teostada kordusaudit.
-3. Parandada ülejäänud keskmise prioriteediga puudused.
+| Vastutusala | Ülesanded |
+|---|---|
+| Arendaja | Klaviatuurikasutus<br>Kontrastsus<br>Fookuse haldus<br>ARIA atribuudid<br>Semantiline HTML<br>Olekuteated<br>Ülehüppamislink<br>Autocomplete atribuudid |
+| Sisutoimetaja | Alternatiivtekstid<br>Tõlked<br>Veatekstid<br>Lehtede pealkirjad |
+| Jagatud vastutus | Ligipääsetavuse teatis<br>Karussellid<br>Vormide kasutusloogika |
 
 ---
 
 # Teatise näidis
+
+<button class="copy-statement-button" type="button" id="copy-statement-button">Kopeeri teatis</button>
 
 **Ligipääsetavuse teatis**
 
