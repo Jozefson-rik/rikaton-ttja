@@ -330,25 +330,34 @@ toc_sticky: true
 		}
 
 		const copyStatementButton = document.querySelector("#copy-statement-button");
-		const statementHeading = copyStatementButton?.previousElementSibling;
+		const statementHeading = copyStatementButton?.closest(".markdown-body")?.querySelector("h1:last-of-type")
+			|| copyStatementButton?.previousElementSibling;
 
 		if (copyStatementButton && statementHeading?.tagName === "H1") {
 			copyStatementButton.addEventListener("click", async () => {
-				const siblings = Array.from(statementHeading.parentElement.children);
-				const headingIndex = siblings.indexOf(statementHeading);
-				const content = siblings
-					.slice(headingIndex + 1)
-					.filter((element) => element !== copyStatementButton)
-					.map((element) => element.innerText.trim())
-					.filter(Boolean)
-					.join("\n\n");
-				const textToCopy = `${statementHeading.textContent.replace(/Anchor\s*$/, "").trim()}\n\n${content}`;
+				const content = [];
+				let nextElement = statementHeading.nextElementSibling;
+
+				while (nextElement && nextElement.tagName !== "H1") {
+					if (nextElement !== copyStatementButton && nextElement.innerText.trim()) {
+						content.push(nextElement.innerText.trim());
+					}
+					nextElement = nextElement.nextElementSibling;
+				}
+
+				const textToCopy = `${statementHeading.textContent.replace(/Anchor\s*$/, "").trim()}\n\n${content.join("\n\n")}`;
 
 				try {
+					if (!navigator.clipboard?.writeText) {
+						throw new Error("Clipboard API unavailable");
+					}
 					await navigator.clipboard.writeText(textToCopy);
 				} catch {
 					const textArea = document.createElement("textarea");
 					textArea.value = textToCopy;
+					textArea.setAttribute("readonly", "");
+					textArea.style.position = "fixed";
+					textArea.style.opacity = "0";
 					document.body.appendChild(textArea);
 					textArea.select();
 					document.execCommand("copy");
