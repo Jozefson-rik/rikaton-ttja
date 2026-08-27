@@ -44,11 +44,11 @@ toc_sticky: true
 	}
 
 	.markdown-body a {
-		color: #003b5c;
+		color: #003087;
 	}
 
 	.markdown-body a:hover {
-		color: #00263d;
+		color: #2d5196;
 	}
 
 	.download-button {
@@ -107,6 +107,27 @@ toc_sticky: true
 </style>
 
 <script>
+	const addAccessibleLinkLabels = () => {
+		const pageNames = new Set([
+			"Avaleht",
+			"Odavad kaubad",
+			"Toode",
+			"Ostukorv",
+			"Ostu vormistamine",
+			"Kontaktid",
+			"Juhend",
+			"Kinkekaart",
+		]);
+
+		document.querySelectorAll(".markdown-body a").forEach((link) => {
+			const linkText = link.textContent.trim();
+
+			if (!link.getAttribute("aria-label") && pageNames.has(linkText)) {
+				link.setAttribute("aria-label", `${linkText}, mõjutatud alamleht`);
+			}
+		});
+	};
+
 	const setupAuditFindingToggles = () => {
 		const headings = Array.from(document.querySelectorAll(".markdown-body h2, main h2, .main-content h2"));
 		const issueHeadingPattern = /^(WCAG|EN 301 549)/;
@@ -164,8 +185,12 @@ toc_sticky: true
 	};
 
 	if (document.readyState === "loading") {
-		document.addEventListener("DOMContentLoaded", setupAuditFindingToggles);
+		document.addEventListener("DOMContentLoaded", () => {
+			addAccessibleLinkLabels();
+			setupAuditFindingToggles();
+		});
 	} else {
+		addAccessibleLinkLabels();
 		setupAuditFindingToggles();
 	}
 </script>
