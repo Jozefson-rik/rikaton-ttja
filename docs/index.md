@@ -166,6 +166,10 @@ toc_sticky: true
 
 	.report-section-toggle {
 		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
 		padding: 0;
 		border: 0;
 		background: transparent;
@@ -220,6 +224,8 @@ toc_sticky: true
 
 		document.querySelectorAll(".markdown-body a").forEach((link) => {
 			const linkText = link.textContent.trim();
+			link.setAttribute("target", "_blank");
+			link.setAttribute("rel", "noopener noreferrer");
 
 			if (!link.getAttribute("aria-label") && pageNames.has(linkText)) {
 				link.setAttribute("aria-label", `${linkText}, mõjutatud alamleht`);
