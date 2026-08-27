@@ -263,14 +263,19 @@ toc_sticky: true
 		});
 
 		const foldAllButton = document.querySelector("#fold-all-button");
+		const reportToc = document.querySelector(".report-toc");
 		if (foldAllButton) {
 			foldAllButton.addEventListener("click", () => {
 				const panels = Array.from(document.querySelectorAll(".audit-finding-panel"));
-				const shouldExpand = panels.some((panel) => panel.hidden);
+				const shouldExpand = panels.some((panel) => panel.hidden) || (reportToc && !reportToc.open);
 
 				panels.forEach((panel) => {
 					panel.hidden = !shouldExpand;
 				});
+
+				if (reportToc) {
+					reportToc.open = shouldExpand;
+				}
 
 				document.querySelectorAll(".audit-finding-toggle").forEach((toggle) => {
 					toggle.setAttribute("aria-expanded", String(shouldExpand));
@@ -351,19 +356,8 @@ toc_sticky: true
 | Kontakt | [mingiemail@ttja.ee](mailto:mingiemail@ttja.ee) |
 | Standard | EN 301 549 V3.2.1 / WCAG |
 | Kontrolli liik | Põhjalik audit |
-| Testitud alamlehti | 8 |
+| Testitud alamlehti | 8<br>[Avaleht](https://www.test.ee/)<br>[Odavad kaubad](https://www.test.ee/odavad-kaubad)<br>[Toode](https://www.test.ee/toode)<br>[Ostukorv](https://www.test.ee/ostukorv)<br>[Ostu vormistamine](https://www.test.ee/ostu-vormistamine)<br>[Kontaktid](https://www.test.ee/kontaktid)<br>[Juhend](https://www.test.ee/juhend)<br>[Kinkekaart](https://www.test.ee/kinkekaart) |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
-
-TODO: TEKSTILINE KIRJELDUS, MILLE JÄRGI MIS LEHEKÜLGI VALITI + AUTOMAATIKA/MANUAAL TESTIDE KATTUVUS.
-Lehtede valim:
-Avaleht
-Odavad kaubad
-Toode
-Ostukorv
-Ostu vormistamine
-Kontaktid
-Juhend
-Kinkekaart
 
 # Kokkuvõte
 
@@ -850,7 +844,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 ---
 
-# Teatise näidis
+# Eeltäidetud teatis
 
 <button class="copy-statement-button" type="button" id="copy-statement-button">Kopeeri teatis</button>
 
