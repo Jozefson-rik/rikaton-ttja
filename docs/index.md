@@ -414,9 +414,7 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 | 9 | Uuendada ligipääsetavuse teatist vastavalt parandatud olukorrale. | Avalik teatis kajastab tegelikku vastavuse taset. |
 | 10 | Teha kordusaudit kõigil 8 alamlehel ja kinnitada paranduste toimivus. | Parandused on kontrollitud ja allesjäänud riskid dokumenteeritud. |
 
----
-
-# Vastutusalad
+## Vastutusalad
 
 | Vastutusala | Ülesanded |
 |---|---|
