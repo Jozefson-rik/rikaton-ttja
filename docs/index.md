@@ -206,13 +206,30 @@ toc_sticky: true
 | Testitud alamlehti | 8 |
 | Kasutatud tööriistad | NVDA, WAVE, WebAIM Contrast Checker, Chrome, Firefox, Edge jt |
 
-# Sissejuhatus
+# Kokkuvõte
 
-Käesolev aruanne annab koondülevaate veebilehe test.ee digiligipääsetavuse hetkeseisust ja peamistest mittevastavustest. Põhjaliku auditi käigus kontrolliti 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel ning tuvastati 20 nõuet, mille puhul esines vähemalt üks mittevastavus.
+Auditi käigus kontrolliti veebilehe [test.ee](https://www.test.ee/) 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel. Tuvastati **20 nõuet, mille puhul esines vähemalt üks mittevastavus**.
 
-Kõige olulisemad puudused puudutavad klaviatuuriga navigeerimist, ekraanilugeja tuge, fookuse nähtavust, kasutajaliidese olekuteavet ning teksti ja komponentide kontrastsust. Need probleemid võivad takistada veebilehe iseseisvat kasutamist pimedatel ja vaegnägijatel, liikumispuudega kasutajatel ning inimestel, kes kasutavad suurendust, klaviatuuri või kõrgkontrastset kuvarežiimi.
+Kõige suurema mõjuga riskid on seotud klaviatuuriga navigeerimise, ekraanilugeja toe, fookuse nähtavuse, kasutajaliidese olekuteabe, semantilise struktuuri ja kontrastsusega. Need võivad takistada veebilehe iseseisvat kasutamist pimedatel ja vaegnägijatel, liikumispuudega kasutajatel ning inimestel, kes kasutavad klaviatuuri, suurendust või kõrgkontrastset kuvarežiimi.
 
-Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõjutavad põhifunktsioonide kasutamist, ning seejärel kõrge prioriteediga visuaalsetele ja kasutajaliidese puudustele. Iga leiu juures on toodud standardiviited, mõju, vastutaja, mõjutatud alamlehed ja tehniline viide, et aruannet saaks kasutada praktilise parandusplaani alusena.
+Tööde järjekord peaks olema järgmine: esmalt kõrvaldada põhifunktsioone takistavad kriitilised vead, seejärel parandada kontrastsuse ja fookuse probleemid ning lõpuks viimistleda sisu, tõlked ja teatis. Allolev nimekiri on mõeldud otse tööülesannete jagamiseks.
+
+## TODO tööde jagamiseks
+
+| Prioriteet | Tööülesanne | Vastutaja | Tähtaeg | Oodatav tulemus |
+|---|---|---|---|---|
+| 1 | Parandada klaviatuurifookus, sisselogimise dialoog, otsingusoovitused ja vahelejäävad elemendid. | Arendaja | 30 päeva | Kõiki põhifunktsioone saab kasutada ainult klaviatuuriga. |
+| 2 | Lisada põhisisuni viiv ülehüppamislink ning korrastada fookuse järjekord. | Arendaja | 30 päeva | Kasutaja jõuab kiiresti põhisisuni ja fookus liigub loogiliselt. |
+| 3 | Parandada semantiline HTML, pealkirjatasemed, vormisildid ja ARIA olekuteave. | Arendaja | 30 päeva | Ekraanilugeja saab lehe struktuurist ja olekutest aru. |
+| 4 | Parandada teksti, linkide, nuppude, vormiväljade ja ikoonide kontrastsus. | Arendaja | 30 päeva | Visuaalsed ja mitte-tekstuaalsed komponendid eristuvad piisavalt. |
+| 5 | Lisada puuduvad alternatiivtekstid ning kirjeldada ikoonide ja toodete visuaalne info. | Arendaja ja sisutoimetaja | 90 päeva | Informatiivne sisu on kättesaadav ka ilma visuaalse tajuta. |
+| 6 | Parandada vormide veateated, juhised, kohustuslike väljade tähistus ja `autocomplete` atribuudid. | Arendaja ja sisutoimetaja | 90 päeva | Vormide täitmine ja vigade parandamine on arusaadav. |
+| 7 | Lisada olekuteated otsingule, filtritele ja ostukorvi tegevustele. | Arendaja | 90 päeva | Kasutaja saab teada dünaamiliste tegevuste tulemusest. |
+| 8 | Kontrollida ja parandada vene- ja ingliskeelsete vaadete tõlked. | Sisutoimetaja | 90 päeva | Kõik avalikud vaated sisaldavad täielikku ja ühtset sisu. |
+| 9 | Uuendada ligipääsetavuse teatist vastavalt parandatud olukorrale. | Arendaja ja sisutoimetaja | 180 päeva | Avalik teatis kajastab tegelikku vastavuse taset. |
+| 10 | Teha kordusaudit kõigil 8 alamlehel ja kinnitada paranduste toimivus. | Arendaja ja hindaja | 180 päeva | Parandused on kontrollitud ja allesjäänud riskid dokumenteeritud. |
+
+Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekraanilugejaga ning märkida tulemus tööde nimekirjas. Aruande leiuplokid sisaldavad konkreetseid standardiviiteid, mõjutatud alamlehti ja CSS-valijaid, mida saab kasutada arenduspiletite koostamisel.
 
 ---
 
@@ -731,12 +748,6 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 1. Uuendada ligipääsetavuse teatis.
 2. Teostada kordusaudit.
 3. Parandada ülejäänud keskmise prioriteediga puudused.
-
----
-
-# Kokkuvõte
-
-Audit tuvastas kokku **20 nõuet, mille puhul esines vähemalt üks mittevastavus**. Suurima mõjuga puudused on seotud klaviatuurikasutuse, ekraanilugeja toe, kontrastsuse ning semantilise struktuuriga. Nende parandamine tõstab oluliselt veebilehe vastavust standarditele EN 301 549 ja WCAG 2.2 ning parandab kasutuskogemust kõigile kasutajatele.
 
 ---
 
