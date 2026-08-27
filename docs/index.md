@@ -416,6 +416,16 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 ---
 
+# Vastutusalad
+
+| Vastutusala | Ülesanded |
+|---|---|
+| Arendaja | Klaviatuurikasutus<br>Kontrastsus<br>Fookuse haldus<br>ARIA atribuudid<br>Semantiline HTML<br>Olekuteated<br>Ülehüppamislink<br>Autocomplete atribuudid |
+| Sisutoimetaja | Alternatiivtekstid<br>Tõlked<br>Veatekstid<br>Lehtede pealkirjad |
+| Jagatud vastutus | Ligipääsetavuse teatis<br>Karussellid<br>Vormide kasutusloogika |
+
+---
+
 # Kriitilised probleemid
 
 ## WCAG 2.1.1 Keyboard
@@ -861,16 +871,6 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 - Veebileht ei järgi kasutaja teksti suuruse eelistusi. CSS selector: `html, body, .page-content`
 - Kõrgkontrastses vaates ei muutu kõik elemendid piisavalt loetavaks. CSS selector: `.button, .form-control, .product-card`
 - Osa ikoone ja kasutajaliidese elemente ei kohandu operatsioonisüsteemi ligipääsetavuse seadistustega. CSS selector: `.icon-button svg, .header-actions svg`
-
----
-
-# Vastutusalad
-
-| Vastutusala | Ülesanded |
-|---|---|
-| Arendaja | Klaviatuurikasutus<br>Kontrastsus<br>Fookuse haldus<br>ARIA atribuudid<br>Semantiline HTML<br>Olekuteated<br>Ülehüppamislink<br>Autocomplete atribuudid |
-| Sisutoimetaja | Alternatiivtekstid<br>Tõlked<br>Veatekstid<br>Lehtede pealkirjad |
-| Jagatud vastutus | Ligipääsetavuse teatis<br>Karussellid<br>Vormide kasutusloogika |
 
 ---
 
