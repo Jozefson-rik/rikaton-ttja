@@ -43,6 +43,14 @@ toc_sticky: true
 		outline-offset: 4px;
 	}
 
+	.markdown-body a {
+		color: #003b5c;
+	}
+
+	.markdown-body a:hover {
+		color: #00263d;
+	}
+
 	.download-button {
 		display: inline-block;
 		margin: 1rem 0;
@@ -188,7 +196,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 2.1.1 Keyboard
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.2.1.1 Keyboard |
+| [EN 301 549 viide] | §9.2.1.1 Keyboard |
 | WCAG viide | [WCAG 2.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.1.1&id=wcag-2.1.1-2.1.1-success-criterion-3496a62ea785) |
 | Mõju kasutajale | Kõik kasutajad ei saa veebilehte kasutada ainult klaviatuuriga. |
 | Vastutaja | ✅ Arendaja |
@@ -218,7 +226,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 2.4.1 Bypass Blocks
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.2.4.1 Bypass Blocks |
+| [EN 301 549 viide] | §9.2.4.1 Bypass Blocks |
 | WCAG viide | [WCAG 2.4.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.1&id=wcag-2.4.1-2.4.1-success-criterion-03fff1a1bbfe) |
 | Mõju kasutajale | Klaviatuuri- ja ekraanilugejakasutajad peavad igal lehel läbima kogu päise ja menüü enne põhisisuni jõudmist. |
 | Vastutaja | ✅ Arendaja |
@@ -245,7 +253,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 1.3.1 Info and Relationships
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.1.3.1 Info and Relationships |
+| [EN 301 549 viide] | §9.1.3.1 Info and Relationships |
 | WCAG viide | [WCAG 1.3.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.3.1&id=wcag-1.3.1-1.3.1-success-criterion-4f68d524e4c2) |
 | Mõju kasutajale | Ekraanilugejad ei saa veebilehe struktuuri korrektselt edasi anda. |
 | Vastutaja | ✅ Arendaja |
@@ -275,7 +283,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 4.1.2 Name, Role, Value
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.4.1.2 Name, Role, Value |
+| [EN 301 549 viide] | §9.4.1.2 Name, Role, Value |
 | WCAG viide | [WCAG 4.1.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=4.1.2&id=wcag-4.1.2-4.1.2-success-criterion-260b752b491b) |
 | Mõju kasutajale | Ekraanilugeja kasutajad ei saa kasutajaliidese elementide olekust aru. |
 | Vastutaja | ✅ Arendaja |
@@ -307,7 +315,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 1.4.3 Contrast (Minimum)
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.1.4.3 Contrast (Minimum) |
+| [EN 301 549 viide] | §9.1.4.3 Contrast (Minimum) |
 | WCAG viide | [WCAG 1.4.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.4.3&id=wcag-1.4.3-1.4.3-success-criterion-06c311b42c2d) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -339,7 +347,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 1.4.11 Non-text Contrast
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.1.4.11 Non-text Contrast |
+| [EN 301 549 viide] | §9.1.4.11 Non-text Contrast |
 | WCAG viide | [WCAG 1.4.11](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.4.11&id=wcag-1.4.11-1.4.11-success-criterion-7d1acb39f7f0) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -369,7 +377,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 2.4.7 Focus Visible
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.2.4.7 Focus Visible |
+| [EN 301 549 viide] | §9.2.4.7 Focus Visible |
 | WCAG viide | [WCAG 2.4.7](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.7&id=wcag-2.4.7-2.4.7-success-criterion-74ab3972e1d1) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -400,7 +408,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 1.1.1 Non-text Content
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.1.1.1 Non-text Content |
+| [EN 301 549 viide] | §9.1.1.1 Non-text Content |
 | WCAG viide | [WCAG 1.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.1.1&id=wcag-1.1.1-1.1.1-success-criterion-18548a3b09d7) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
@@ -429,7 +437,7 @@ Parandustöödes tuleks esmalt keskenduda kriitilistele probleemidele, mis mõju
 ## WCAG 3.3.1 Error Identification
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.3.3.1 Error Identification |
+| [EN 301 549 viide] | §9.3.3.1 Error Identification |
 | WCAG viide | [WCAG 3.3.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.1&id=wcag-3.3.1-3.3.1-success-criterion-cb1a373df5d2) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -449,7 +457,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 ## WCAG 3.3.2 Labels or Instructions
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.3.3.2 Labels or Instructions |
+| [EN 301 549 viide] | §9.3.3.2 Labels or Instructions |
 | WCAG viide | [WCAG 3.3.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.2&id=wcag-3.3.2-3.3.2-success-criterion-e66da61d25f3) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja<br>✅ Sisutoimetaja |
@@ -471,7 +479,7 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 ## WCAG 3.3.3 Error Suggestion
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.3.3.3 Error Suggestion |
+| [EN 301 549 viide] | §9.3.3.3 Error Suggestion |
 | WCAG viide | [WCAG 3.3.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.3.3&id=wcag-3.3.3-3.3.3-success-criterion-cb5084410615) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -491,7 +499,7 @@ Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS
 ## WCAG 3.1.1 Language of Page
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.3.1.1 Language of Page |
+| [EN 301 549 viide] | §9.3.1.1 Language of Page |
 | WCAG viide | [WCAG 3.1.1](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=3.1.1&id=wcag-3.1.1-3.1.1-success-criterion-1fcbac084231) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Sisutoimetaja |
@@ -518,7 +526,7 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 ## WCAG 2.2.2 Pause, Stop, Hide
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.2.2.2 Pause, Stop, Hide |
+| [EN 301 549 viide] | §9.2.2.2 Pause, Stop, Hide |
 | WCAG viide | [WCAG 2.2.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.2.2&id=wcag-2.2.2-2.2.2-success-criterion-f1204e1d633d) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -538,7 +546,7 @@ Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 ## WCAG 2.4.2 Page Titled
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.2.4.2 Page Titled |
+| [EN 301 549 viide] | §9.2.4.2 Page Titled |
 | WCAG viide | [WCAG 2.4.2](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.2&id=wcag-2.4.2-2.4.2-success-criterion-029376ef6914) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -558,7 +566,7 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 ## WCAG 1.3.5 Identify Input Purpose
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.1.3.5 Identify Input Purpose |
+| [EN 301 549 viide] | §9.1.3.5 Identify Input Purpose |
 | WCAG viide | [WCAG 1.3.5](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=1.3.5&id=wcag-1.3.5-1.3.5-success-criterion-fb80b741698f) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -578,7 +586,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 ## WCAG 4.1.3 Status Messages
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §9.4.1.3 Status Messages |
+| [EN 301 549 viide] | §9.4.1.3 Status Messages |
 | WCAG viide | [WCAG 4.1.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=4.1.3&id=wcag-4.1.3-4.1.3-success-criterion-bc7dc23b0a4f) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -605,7 +613,7 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 ## WCAG 2.4.3 Focus Order
 
 | Hindamise viis | automaatne |
-| [EN 310 549 viide] | §9.2.4.3 Focus Order |
+| [EN 301 549 viide] | §9.2.4.3 Focus Order |
 | WCAG viide | [WCAG 2.4.3](https://mariakesa.github.io/rikaton/wcag_kb/?lang=et&wcag=2.4.3&id=wcag-2.4.3-2.4.3-success-criterion-9415829080b3) |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
@@ -623,7 +631,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 ## EN 301 549 §11.7 User Preferences
 
 | Hindamise viis | käsitsi |
-| [EN 310 549 viide] | §11.7 User Preferences |
+| [EN 301 549 viide] | §11.7 User Preferences |
 | WCAG viide | Ei kohaldu. |
 | Mõju kasutajale | Ei ole eraldi välja toodud. |
 | Vastutaja | ✅ Arendaja |
