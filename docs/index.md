@@ -16,6 +16,8 @@ toc_sticky: true
 | Tagasiside tähtaeg | 30.12.2026 |
 | Kontakt | [mingiemail@ttja.ee](mingiemail@ttja.ee) |
 
+<a class="download-button" href="https://raw.githubusercontent.com/Jozefson-rik/rikaton-ttja/main/docs/index.md" download>Laadi aruanne alla Markdown-failina</a>
+
 <details class="report-toc" open markdown="1">
 <summary>Sisukord</summary>
 
@@ -37,6 +39,25 @@ toc_sticky: true
 	}
 
 	.report-toc summary:focus-visible {
+		outline: 3px solid currentColor;
+		outline-offset: 4px;
+	}
+
+	.download-button {
+		display: inline-block;
+		margin: 1rem 0;
+		padding: 0.6rem 0.9rem;
+		border: 1px solid currentColor;
+		border-radius: 4px;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.download-button:hover {
+		text-decoration: underline;
+	}
+
+	.download-button:focus-visible {
 		outline: 3px solid currentColor;
 		outline-offset: 4px;
 	}
@@ -683,4 +704,110 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 # Kokkuvõte
 
 Audit tuvastas kokku **20 nõuet, mille puhul esines vähemalt üks mittevastavus**. Suurima mõjuga puudused on seotud klaviatuurikasutuse, ekraanilugeja toe, kontrastsuse ning semantilise struktuuriga. Nende parandamine tõstab oluliselt veebilehe vastavust standarditele EN 301 549 ja WCAG 2.2 ning parandab kasutuskogemust kõigile kasutajatele.
-``
+
+---
+
+# Teatise näidis
+
+**Ligipääsetavuse teatis**
+
+Alljärgnevalt kirjeldame vastavust ligipääsetavusnõuetele.
+
+EL kehtib digiteenuste osutamisel ligipääsetavuse nõue, mis eeldab, et kõik avalikud teenused peavad olema ligipääsetavad. See tähendab et, see vastaks avaliku [teabe seaduse § 32](https://www.riigiteataja.ee/akt/AvTS#para32) alusel kehtestatud ligipääsetavusnõuetega (need on kehtestatud standardiga [EN 301 549 V.3.2.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf)).
+
+Käesolev avaldus kehtib Justiits- ja Digiministeeriumi hallatavale veebilehe test [test.ee](http://etoimik.rik.ee/) kohta.
+
+**Töötame pidevalt ligipääsetavuse parandamiseks**
+
+Selle süsteemi ligipääsetavust on hinnanud TTJA tellimusel ligipääsetavuse spetsialist: 13.08.2026.
+
+**Digiteenuste ligipääsetavuse vastavus**
+
+See veebisait vastab osaliselt avaliku teabe seaduse §32 nõuetele allpool loetletud põhjuste tõttu.
+
+**Sisu ja funktsioonid, mis ei ole ligipääsetavad**
+
+| Nr | Nõude tähistus standardis | Nõude nimi | Alamlehe/dokumendi/ekraanikuva nimi, kus mittevastavus esineb | Mittevastavuse lühiselgitus | Selgitus:<br>lahendus mittevastavuse kõrvaldamiseks - alternatiiv. Kõrvaldamise plaan. |
+|---|---|---|---|---|---|
+| 1 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Avaleht](https://www.test.ee/) | Klaviatuuri fookus ei liigu sisselogimise aknasse, vaid jääb taustal liikuma. Otsingusoovitused avanevad automaatselt ning neid ei ole võimalik vahele jätta. Jaluses jäetakse partnerite logod vahele. | Voiceover on tasuline tarkvara |
+| 2 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Lisaks sisselogimise akna ja otsingusoovituste probleemile ei liigu fookus sorteerimise valikule. | Voiceover on tasuline tarkvara |
+| 3 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Ostukorv](https://www.test.ee/ostukorv) | Klaviatuuri fookus jääb sisselogimise akna avamisel taustale liikuma ning otsingusoovitusi ei saa vahele jätta. | Uue projekti raames. |
+| 4 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Lisaks üldistele klaviatuuriprobleemidele ei liigu fookus aja valiku aknale ning aega ei saa sisestusväljale trükkida. | Uue projekti raames. |
+| 5 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Kontaktid](https://www.test.ee/kontaktid) | Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele. | Voiceover on tasuline tarkvara |
+| 6 | EN 301 549 §9.2.1.1 Keyboard<br>WCAG 2.1.1 | Keyboard | [Kinkekaart](https://www.test.ee/kinkekaart) | Sisselogimise akna ja otsingusoovituste probleem kordub ning jaluses jäetakse partnerite logod vahele. | Tugineb eelmiste punktide kordategemisel. |
+| 7 | EN 301 549 §9.2.4.1 Bypass Blocks<br>WCAG 2.4.1 | Bypass Blocks | [Avaleht](https://www.test.ee/) | Lehe päist ei ole võimalik vahele jätta. | Tugineb eelmiste punktide kordategemisel. |
+| 8 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Avaleht](https://www.test.ee/) | Keelevahetuse menüü loetakse ette kui „Button ET“, kuid puudub täpsustus, et tegemist on keelevahetuse menüüga. Lehel on kaks suurt menüüd ilma eristava kirjelduseta ning puudub `h1` pealkiri. | Uue projekti raames. |
+| 9 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata, lehel puudub `h2` ning paginatsioon ei anna teada, millisel lehel kasutaja asub. | Voiceover on tasuline tarkvara |
+| 10 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Toode](https://www.test.ee/toode) | Keelevahetuse menüü ja menüüde eristamise probleem kordub. Toote koguse suurendamisest või ostukorvi lisamisest ei teavitata. | Tugineb eelmiste punktide kordategemisel. |
+| 11 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Ostukorv](https://www.test.ee/ostukorv) | Keelevahetuse menüü kirjeldus puudub. Toote eemaldamisest või koguse vähendamisest ostukorvis ei teavitata. | Tugineb eelmiste punktide kordategemisel. |
+| 12 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Keelevahetuse menüü kirjeldus puudub. Vahele on jäänud `h2` ning vormiväljad, raadionupud ja märkeruudud ei ole seotud oma siltidega. | Uue projekti raames. |
+| 13 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Kontaktid](https://www.test.ee/kontaktid) | Keelevahetuse menüü kirjeldus puudub. | Tugineb eelmiste punktide kordategemisel. |
+| 14 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Juhend](https://www.test.ee/juhend) | Keelevahetuse menüü kirjeldus puudub ning alamlehel on tühi `h2` taseme pealkiri. | Tugineb eelmiste punktide kordategemisel. |
+| 15 | EN 301 549 §9.1.3.1 Info and Relationships<br>WCAG 1.3.1 | Info and Relationships | [Kinkekaart](https://www.test.ee/kinkekaart) | Keelevahetuse menüü kirjeldus puudub. | Tugineb eelmiste punktide kordategemisel. |
+| 16 | EN 301 549 §9.4.1.2 Name, Role, Value<br>WCAG 4.1.2 | Name, Role, Value | [Avaleht](https://www.test.ee/) | Menüüd ei anna olekuteavet: aktiivne menüüpunkt ei ole tuvastatav ning alamenüü avatud või suletud olekut ei edastata. | Uue projekti raames. |
+| 17 | EN 301 549 §9.4.1.2 Name, Role, Value<br>WCAG 4.1.2 | Name, Role, Value | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Menüüd ei anna olekuteavet ning märkeruutude puhul ei loeta ette, kas need on märgistatud või mitte. | Tugineb eelmiste punktide kordategemisel. |
+| 18 | EN 301 549 §9.4.1.2 Name, Role, Value<br>WCAG 4.1.2 | Name, Role, Value | [Toode](https://www.test.ee/toode) | Menüüd ei anna olekuteavet ning akordionide avatud või suletud olekut ei edastata. | Uue projekti raames. |
+| 19 | EN 301 549 §9.4.1.2 Name, Role, Value<br>WCAG 4.1.2 | Name, Role, Value | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Menüüd ei anna olekuteavet; aktiivne menüüpunkt ja alamenüü avatud või suletud olek ei ole abitehnoloogiale selged. | Voiceover on tasuline tarkvara |
+| 20 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Avaleht](https://www.test.ee/) | Küpsiste akna sinise nupu ja valge teksti kontrastsus on 1.5:1. Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1, otsinguvälja placeholder'i kontrastsus 3:1 ning ostukorvi halli teksti kontrastsus 2.5:1. | Tugineb eelmiste punktide kordategemisel. |
+| 21 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on leivapuru kontrastsus 3.5:1, toote hinna kontrastsus 3.5:1 ning sildi sinise tausta ja valge teksti kontrastsus 2.5:1. | Voiceover on tasuline tarkvara |
+| 22 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Ostukorv](https://www.test.ee/ostukorv) | Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Lisaks on „Teade“ välja placeholder'i kontrastsus 1.5:1, nuppude sinise teksti kontrastsus 4:1 ning vana läbikriipsutatud hinna kontrastsus 3.5:1. | Voiceover on tasuline tarkvara |
+| 23 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Tagasi nupu hover-oleku kontrastsus on 4:1 ning ülevaates on halli teksti kontrastsus 3.74:1. | Voiceover on tasuline tarkvara |
+| 24 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Kontaktid](https://www.test.ee/kontaktid) | Korduvad küpsiste akna, menüü, otsinguvälja ja ostukorvi kontrastsusprobleemid. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi. | Uue projekti raames. |
+| 25 | EN 301 549 §9.1.4.3 Contrast (Minimum)<br>WCAG 1.4.3 | Contrast (Minimum) | [Juhend](https://www.test.ee/juhend) | Peamenüü aktiivse ja hover-oleku kontrastsus on 4:1. Linkide kontrastsus on 4:1 ning hover-olekus väheneb kontrastsus veelgi. | Voiceover on tasuline tarkvara |
+| 26 | EN 301 549 §9.1.4.11 Non-text Contrast<br>WCAG 1.4.11 | Non-text Contrast | [Avaleht](https://www.test.ee/) | „Logi sisse“ nupu tausta ja lehe tausta kontrastsus on 2:1. Ostukorvi nupu sinise tausta ja lehe tausta kontrastsus on 1.5:1. | Tugineb eelmiste punktide kordategemisel. |
+| 27 | EN 301 549 §9.1.4.11 Non-text Contrast<br>WCAG 1.4.11 | Non-text Contrast | [Ostukorv](https://www.test.ee/ostukorv) | Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Lisaks on sisestusväljade piirjoone ja tausta kontrastsus 1.5:1. | Tugineb eelmiste punktide kordategemisel. |
+| 28 | EN 301 549 §9.1.4.11 Non-text Contrast<br>WCAG 1.4.11 | Non-text Contrast | [Kontaktid](https://www.test.ee/kontaktid) | Korduvad sisselogimise ja ostukorvi nupu kontrastsusprobleemid. Linkide teksti ja tausta kontrastsus on 4.36:1. | Uue projekti raames. |
+| 29 | EN 301 549 §9.2.4.7 Focus Visible<br>WCAG 2.4.7 | Focus Visible | [Avaleht](https://www.test.ee/) | Keele muutmise menüül, osadel ikoonidel ja osadel reklaamidel puudub nähtav fookus või see on halvasti eristatav. | Uue projekti raames. |
+| 30 | EN 301 549 §9.2.4.7 Focus Visible<br>WCAG 2.4.7 | Focus Visible | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. „Lisa ostukorvi“ nupul puudub samuti nähtav fookus. | Tugineb eelmiste punktide kordategemisel. |
+| 31 | EN 301 549 §9.2.4.7 Focus Visible<br>WCAG 2.4.7 | Focus Visible | [Ostukorv](https://www.test.ee/ostukorv) | Keele muutmise menüül ja osadel ikoonidel puudub nähtav fookus. | Voiceover on tasuline tarkvara |
+| 32 | EN 301 549 §9.2.4.7 Focus Visible<br>WCAG 2.4.7 | Focus Visible | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Keele muutmise menüül, osadel ikoonidel, märkeruutudel ja raadionuppudel puudub nähtav fookus. | Voiceover on tasuline tarkvara |
+| 33 | EN 301 549 §9.2.4.7 Focus Visible<br>WCAG 2.4.7 | Focus Visible | [Kontaktid](https://www.test.ee/kontaktid) | Keele muutmise menüül puudub nähtav fookus. | Uue projekti raames. |
+| 34 | EN 301 549 §9.1.1.1 Non-text Content<br>WCAG 1.1.1 | Non-text Content | [Avaleht](https://www.test.ee/) | Ostukorvi ikooni juures kuvatakse toodete kogus, kuid ekraanilugejale ei täpsustata, et number tähistab ostukorvis olevate toodete kogust. Osadel pakkumistel ei eristata uue ja vana hinna tähendust. | Voiceover on tasuline tarkvara |
+| 35 | EN 301 549 §9.1.1.1 Non-text Content<br>WCAG 1.1.1 | Non-text Content | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Paginatsioon loeb ette ainult numbrid, kuid ei täpsusta, et tegemist on lehtedega. | Tugineb eelmiste punktide kordategemisel. |
+| 36 | EN 301 549 §9.1.1.1 Non-text Content<br>WCAG 1.1.1 | Non-text Content | [Toode](https://www.test.ee/toode) | Ostukorvi koguse tähendus ei ole ekraanilugejale selge. | Tugineb eelmiste punktide kordategemisel. |
+| 37 | EN 301 549 §9.1.1.1 Non-text Content<br>WCAG 1.1.1 | Non-text Content | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Ostukorvi koguse tähendus ei ole ekraanilugejale selge. Ülevaates oleval pakendi ikoonil puudub ligipääsetav kirjeldus. | Tugineb eelmiste punktide kordategemisel. |
+| 38 | EN 301 549 §9.3.3.1 Error Identification<br>WCAG 3.3.1 | Error Identification | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Vigase välja alla kuvatakse veateade, kuid väli ise ei ole visuaalselt eristatud. | Uue projekti raames. |
+| 39 | EN 301 549 §9.3.3.2 Labels or Instructions<br>WCAG 3.3.2 | Labels or Instructions | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Kohustuslike väljade ees on tärn (*), kuid puudub selgitus, mida see tähendab. Lehel on palju erineva kujundusega vorme ning osade vormide puhul ei ole aru saada, kas need on kohustuslikud või mitte. | Voiceover on tasuline tarkvara |
+| 40 | EN 301 549 §9.3.3.3 Error Suggestion<br>WCAG 3.3.3 | Error Suggestion | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Veateadetes puuduvad parandamise soovitused. | Tugineb eelmiste punktide kordategemisel. |
+| 41 | EN 301 549 §9.3.1.1 Language of Page<br>WCAG 3.1.1 | Language of Page | [Avaleht](https://www.test.ee/) | Vene- ja ingliskeelses vaates on osa tekstidest tõlkimata. | Uue projekti raames. |
+| 42 | EN 301 549 §9.2.2.2 Pause, Stop, Hide<br>WCAG 2.2.2 | Pause, Stop, Hide | [Avaleht](https://www.test.ee/) | Avalehel on kasutusel karussell, mida ei ole võimalik peatada. | Tugineb eelmiste punktide kordategemisel. |
+| 43 | EN 301 549 §9.2.4.2 Page Titled<br>WCAG 2.4.2 | Page Titled | [Ostukorv](https://www.test.ee/ostukorv) | Lehe tiitel on „test.ee“, mis ei anna teada, et tegemist on ostukorvi vaatega. | Uue projekti raames. |
+| 44 | EN 301 549 §9.1.3.5 Identify Input Purpose<br>WCAG 1.3.5 | Identify Input Purpose | [Ostu vormistamine](https://www.test.ee/ostu-vormistamine) | Vormidel puudub `autocomplete` atribuut. | Voiceover on tasuline tarkvara |
+| 45 | EN 301 549 §9.4.1.3 Status Messages<br>WCAG 4.1.3 | Status Messages | [Avaleht](https://www.test.ee/) | Otsingutulemuste puhul ei anta teada, mitu tulemust otsinguga leiti. | Voiceover on tasuline tarkvara |
+| 46 | EN 301 549 §9.4.1.3 Status Messages<br>WCAG 4.1.3 | Status Messages | [Odavad kaubad](https://www.test.ee/odavad-kaubad) | Otsingutulemuste arvu ei teatata. Filtri rakendamisel ei anta automaatselt teada, mitu tulemust valikusse jäi. | Uue projekti raames. |
+| 47 | EN 301 549 §9.4.1.3 Status Messages<br>WCAG 4.1.3 | Status Messages | [Ostukorv](https://www.test.ee/ostukorv) | Otsingutulemuste arvu ei teatata. Toote eemaldamisel ostukorvist ei anta teada, et toode eemaldati. Koguse muutmisel ei teatata, et muudatus tehti ega mitu eset ostukorvi jäi. | Voiceover on tasuline tarkvara |
+| 48 | EN 301 549 §9.2.4.3 Focus Order<br>WCAG 2.4.3 | Focus Order | [Toode](https://www.test.ee/toode) | Pärast sisselogimise nuppu liigub klaviatuuri fookus korraks jalusesse. | Uue projekti raames. |
+| 49 | EN 301 549 §11.7 User Preferences<br>WCAG: ei kohaldu | User Preferences | [Avaleht](https://www.test.ee/) | Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks. | Voiceover on tasuline tarkvara |
+| 50 | EN 301 549 §11.7 User Preferences<br>WCAG: ei kohaldu | User Preferences | [Ostukorv](https://www.test.ee/ostukorv) | Brauseris suurema teksti valimisel tekst ei suurene. Windowsi kõrgkontrastses vaates ei muutu osa tekste ja ikoone kõrgkontrastseks ning märkeruutudel kaob oleku eristus. | Uue projekti raames. |
+
+***Allpool loetletud sisule rakendub ebaproportsionaalne koormuse erand.***
+
+Puudub.
+
+***Allpool loetletud sisu ei kuulu kohaldatavate õigusnormide kohaldamisalasse***
+
+Puudub.
+
+**Tagasiside**
+
+Andke ligipääsetavuse kohta tagasisidet kirjutades kasutajatoele.
+
+E-post: [info@pelmeen.ee](mailto:info@pelmeen.ee)
+
+Telefon: +372 680 3160
+
+Vastame teile tavaliselt E-N 9.00-17.00, R 9.00-14.00.
+
+**Ligipääsetavuse järelevalve asutus**
+
+Avalike teenuste veebide ja rakenduste ligipääsetavuse osas teostab järelevalvet Tarbijakaitse ja Tehnilise Järelevalve Amet.
+
+Veebileht: [www.ttja.ee](http://www.ttja.ee/)
+
+E-post: [info@ttja.ee](mailto:info@ttja.ee)
+
+Telefon: 667 2000
+
+**Veebilehe testimine**
+
+Käesolev avaldus on koostatud 23.01.2024.
