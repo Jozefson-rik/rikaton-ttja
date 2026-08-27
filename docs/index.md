@@ -225,7 +225,7 @@ toc_sticky: true
 		document.querySelectorAll(".markdown-body a").forEach((link) => {
 			const linkText = link.textContent.trim();
 
-			if (link.closest(".report-toc")) {
+			if (link.closest(".report-toc") || link.getAttribute("href")?.startsWith("#")) {
 				return;
 			}
 
