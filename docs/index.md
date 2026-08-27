@@ -410,18 +410,26 @@ Tööde järjekord peaks olema järgmine: esmalt kõrvaldada põhifunktsioone ta
 
 Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekraanilugejaga ning märkida tulemus tööde nimekirjas. Aruande leiuplokid sisaldavad konkreetseid standardiviiteid, mõjutatud alamlehti ja CSS-valijaid, mida saab kasutada arenduspiletite koostamisel.
 
-| Prioriteet | Tegevus | Oodatav tulemus |
-|---|---|---|
-| 1 | Parandada klaviatuurifookus, sisselogimise dialoog, otsingusoovitused ja vahelejäävad elemendid. | Kõiki põhifunktsioone saab kasutada ainult klaviatuuriga. |
-| 2 | Lisada põhisisuni viiv ülehüppamislink ning korrastada fookuse järjekord. | Kasutaja jõuab kiiresti põhisisuni ja fookus liigub loogiliselt. |
-| 3 | Parandada semantiline HTML, pealkirjatasemed, vormisildid ja ARIA olekuteave. | Ekraanilugeja saab lehe struktuurist ja olekutest aru. |
-| 4 | Parandada teksti, linkide, nuppude, vormiväljade ja ikoonide kontrastsus. | Visuaalsed ja mitte-tekstuaalsed komponendid eristuvad piisavalt. |
-| 5 | Lisada puuduvad alternatiivtekstid ning kirjeldada ikoonide ja toodete visuaalne info. | Informatiivne sisu on kättesaadav ka ilma visuaalse tajuta. |
-| 6 | Parandada vormide veateated, juhised, kohustuslike väljade tähistus ja `autocomplete` atribuudid. | Vormide täitmine ja vigade parandamine on arusaadav. |
-| 7 | Lisada olekuteated otsingule, filtritele ja ostukorvi tegevustele. | Kasutaja saab teada dünaamiliste tegevuste tulemusest. |
-| 8 | Kontrollida ja parandada vene- ja ingliskeelsete vaadete tõlked. | Kõik avalikud vaated sisaldavad täielikku ja ühtset sisu. |
-| 9 | Uuendada ligipääsetavuse teatist vastavalt parandatud olukorrale. | Avalik teatis kajastab tegelikku vastavuse taset. |
-| 10 | Teha kordusaudit kõigil 8 alamlehel ja kinnitada paranduste toimivus. | Parandused on kontrollitud ja allesjäänud riskid dokumenteeritud. |
+| Prioriteet | Raportiviide | Tegevus | Oodatav tulemus |
+|---|---|---|---|
+| 1 | [WCAG 2.1.1](#bug-wcag-211) | Parandada klaviatuurifookus, sisselogimise dialoog, otsingusoovitused ja vahelejäävad elemendid. | Kõiki põhifunktsioone saab kasutada ainult klaviatuuriga. |
+| 2 | [WCAG 2.4.1](#bug-wcag-241) | Lisada põhisisuni viiv ülehüppamislink. | Kasutaja saab päisest ja menüüst otse põhisisuni liikuda. |
+| 3 | [WCAG 1.3.1](#bug-wcag-131) | Parandada semantiline HTML, pealkirjatasemed, vormisildid ja dünaamiliste muudatuste semantika. | Ekraanilugeja saab lehe struktuurist ja seostest aru. |
+| 4 | [WCAG 4.1.2](#bug-wcag-412) | Lisada menüüde, märkeruutude ja akordionide olekuteave. | Kasutajaliidese nimi, roll ja olek on abitehnoloogiale selged. |
+| 5 | [WCAG 1.4.3](#bug-wcag-143) | Parandada teksti, linkide, hindade, placeholder'ite ja menüüelementide kontrastsus. | Tekst vastab kontrastsusnõuetele ja on loetav. |
+| 6 | [WCAG 1.4.11](#bug-wcag-1411) | Parandada nuppude, sisestusväljade ja muude kasutajaliidese komponentide kontrastsus. | Komponendid eristuvad taustast piisavalt. |
+| 7 | [WCAG 2.4.7](#bug-wcag-247) | Lisada nähtav fookus keelevahetajale, ikoonidele, nuppudele, märkeruutudele ja raadionuppudele. | Klaviatuuri fookus on alati nähtav. |
+| 8 | [WCAG 1.1.1](#bug-wcag-111) | Lisada puuduvad alternatiivtekstid ja kirjeldused ikoonidele ning visuaalset infot sisaldavatele piltidele. | Informatiivne sisu on kättesaadav ka ilma visuaalse tajuta. |
+| 9 | [WCAG 3.3.1](#bug-wcag-331) | Tähistada vigased vormiväljad visuaalselt. | Kasutaja tuvastab vigase välja kiiresti. |
+| 10 | [WCAG 3.3.2](#bug-wcag-332) | Lisada vormidele selged juhised ja selgitada kohustuslike väljade tähistust. | Kasutaja teab, millist infot ja millises vormingus sisestada. |
+| 11 | [WCAG 3.3.3](#bug-wcag-333) | Lisada veateadetele konkreetsed parandamise soovitused. | Kasutaja saab vea iseseisvalt parandada. |
+| 12 | [WCAG 3.1.1](#bug-wcag-311) | Tõlkida vene- ja ingliskeelsetes vaadetes puuduv sisu. | Kõik avalikud vaated sisaldavad täielikku ja ühtset sisu. |
+| 13 | [WCAG 2.2.2](#bug-wcag-222) | Lisada karussellile peatamise võimalus. | Liikuvat sisu saab kasutaja peatada. |
+| 14 | [WCAG 2.4.2](#bug-wcag-242) | Määrata ostukorvi vaatele kirjeldav lehe pealkiri. | Lehe eesmärk on brauseris ja abitehnoloogias arusaadav. |
+| 15 | [WCAG 1.3.5](#bug-wcag-135) | Lisada vormiväljadele sobivad `autocomplete` atribuudid. | Isikuandmete sisestamine on lihtsam ja täpsem. |
+| 16 | [WCAG 4.1.3](#bug-wcag-413) | Lisada olekuteated otsingule, filtritele ja ostukorvi tegevustele. | Kasutaja saab teada dünaamiliste tegevuste tulemusest. |
+| 17 | [WCAG 2.4.3](#bug-wcag-243) | Korrastada tootelehel klaviatuuri fookuse järjekord. | Fookus liigub kasutaja jaoks loogilises järjestuses. |
+| 18 | [EN 301 549 §11.7](#bug-en-301-549-117) | Tagada teksti suuruse, kontrastsuse ja kasutajaliidese kohandumine kasutaja eelistustega. | Veebileht toimib paremini kasutaja ligipääsetavusseadetega. |
 
 ## Vastutusalad
 
@@ -434,6 +442,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 ---
 
 # Kriitilised probleemid
+
+<a id="bug-wcag-211"></a>
 
 ## WCAG 2.1.1 Keyboard
 
@@ -464,6 +474,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 ---
 
+<a id="bug-wcag-241"></a>
+
 ## WCAG 2.4.1 Bypass Blocks
 
 | Hindamise viis | automaatne |
@@ -489,6 +501,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 - Puudub ülehüppamislink põhisisu juurde. CSS selector: `.skip-link`
 
 ---
+
+<a id="bug-wcag-131"></a>
 
 ## WCAG 1.3.1 Info and Relationships
 
@@ -518,6 +532,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 - Dünaamilistest muudatustest ei teavitata. CSS selector: `.search-results, .cart-status`
 
 ---
+
+<a id="bug-wcag-412"></a>
 
 ## WCAG 4.1.2 Name, Role, Value
 
@@ -550,6 +566,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 # Kõrge prioriteediga probleemid
 
+<a id="bug-wcag-143"></a>
+
 ## WCAG 1.4.3 Contrast (Minimum)
 
 | Hindamise viis | käsitsi |
@@ -581,6 +599,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 ---
 
+<a id="bug-wcag-1411"></a>
+
 ## WCAG 1.4.11 Non-text Contrast
 
 | Hindamise viis | automaatne |
@@ -609,6 +629,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 - Muud kasutajaliidese komponendid ei eristu taustast piisavalt. CSS selector: `.button--secondary, .icon-button`
 
 ---
+
+<a id="bug-wcag-247"></a>
 
 ## WCAG 2.4.7 Focus Visible
 
@@ -640,6 +662,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 ---
 
+<a id="bug-wcag-111"></a>
+
 ## WCAG 1.1.1 Non-text Content
 
 | Hindamise viis | käsitsi |
@@ -668,6 +692,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 
 # Keskmise prioriteediga probleemid
 
+<a id="bug-wcag-331"></a>
+
 ## WCAG 3.3.1 Error Identification
 
 | Hindamise viis | automaatne |
@@ -686,6 +712,8 @@ Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekra
 Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole probleemne väli kasutajale piisavalt esile toodud. CSS selector: `.checkout-form .form-field--error input`
 
 ---
+
+<a id="bug-wcag-332"></a>
 
 ## WCAG 3.3.2 Labels or Instructions
 
@@ -708,6 +736,8 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 
 ---
 
+<a id="bug-wcag-333"></a>
+
 ## WCAG 3.3.3 Error Suggestion
 
 | Hindamise viis | automaatne |
@@ -726,6 +756,8 @@ Vigane väli ei ole visuaalselt eristatav. Kuigi kuvatakse veateade, ei ole prob
 Veateated ei sisalda kasutajale soovitusi, kuidas sisestatud viga parandada. CSS selector: `.checkout-form .error-message`
 
 ---
+
+<a id="bug-wcag-311"></a>
 
 ## WCAG 3.1.1 Language of Page
 
@@ -753,6 +785,8 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 
 ---
 
+<a id="bug-wcag-222"></a>
+
 ## WCAG 2.2.2 Pause, Stop, Hide
 
 | Hindamise viis | automaatne |
@@ -771,6 +805,8 @@ Vene- ja ingliskeelsetes vaadetes esineb tõlkimata sisu.
 Karusselli ei ole võimalik peatada. CSS selector: `.hero-carousel`
 
 ---
+
+<a id="bug-wcag-242"></a>
 
 ## WCAG 2.4.2 Page Titled
 
@@ -791,6 +827,8 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 
 ---
 
+<a id="bug-wcag-135"></a>
+
 ## WCAG 1.3.5 Identify Input Purpose
 
 | Hindamise viis | käsitsi |
@@ -809,6 +847,8 @@ Lehe pealkiri ei kirjelda ostukorvi vaadet.
 Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form input[name="email"], .checkout-form input[name="phone"], .checkout-form input[name="address"]`
 
 ---
+
+<a id="bug-wcag-413"></a>
 
 ## WCAG 4.1.3 Status Messages
 
@@ -836,6 +876,8 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 
 ---
 
+<a id="bug-wcag-243"></a>
+
 ## WCAG 2.4.3 Focus Order
 
 | Hindamise viis | automaatne |
@@ -852,6 +894,8 @@ Vormiväljadel puuduvad autocomplete atribuudid. CSS selector: `.checkout-form i
 {: .no_toc }
 
 Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloogiliseks. CSS selector: `.product-detail .product-gallery button, footer a`
+
+<a id="bug-en-301-549-117"></a>
 
 ## EN 301 549 §11.7 User Preferences
 
