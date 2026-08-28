@@ -352,33 +352,22 @@ toc_sticky: true
 				}
 
 				const htmlToCopy = content.innerHTML;
-				const textToCopy = content.innerText.replace(/Anchor\s*$/, "").trim();
 
 				try {
-					if (!navigator.clipboard?.write || !window.ClipboardItem) {
+					if (!navigator.clipboard?.writeText) {
 						throw new Error("Clipboard API unavailable");
 					}
-					await navigator.clipboard.write([
-						new ClipboardItem({
-							"text/html": new Blob([htmlToCopy], { type: "text/html" }),
-							"text/plain": new Blob([textToCopy], { type: "text/plain" }),
-						}),
-					]);
+					await navigator.clipboard.writeText(htmlToCopy);
 				} catch {
-					const copyContainer = document.createElement("div");
-					copyContainer.innerHTML = htmlToCopy;
-					copyContainer.style.position = "fixed";
-					copyContainer.style.opacity = "0";
-					document.body.appendChild(copyContainer);
-
-					const selection = window.getSelection();
-					const range = document.createRange();
-					range.selectNodeContents(copyContainer);
-					selection?.removeAllRanges();
-					selection?.addRange(range);
+					const textArea = document.createElement("textarea");
+					textArea.value = htmlToCopy;
+					textArea.setAttribute("readonly", "");
+					textArea.style.position = "fixed";
+					textArea.style.opacity = "0";
+					document.body.appendChild(textArea);
+					textArea.select();
 					document.execCommand("copy");
-					selection?.removeAllRanges();
-					copyContainer.remove();
+					textArea.remove();
 				}
 
 				copyStatementButton.textContent = "Teatis kopeeritud";
