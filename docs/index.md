@@ -340,33 +340,45 @@ toc_sticky: true
 
 		if (copyStatementButton && statementHeading?.tagName === "H1") {
 			copyStatementButton.addEventListener("click", async () => {
-				const content = [];
+				const content = document.createElement("div");
+				content.appendChild(statementHeading.cloneNode(true));
 				let nextElement = statementHeading.nextElementSibling;
 
 				while (nextElement && nextElement.tagName !== "H1") {
 					if (nextElement !== copyStatementButton && nextElement.innerText.trim()) {
-						content.push(nextElement.innerText.trim());
+						content.appendChild(nextElement.cloneNode(true));
 					}
 					nextElement = nextElement.nextElementSibling;
 				}
 
-				const textToCopy = `${statementHeading.textContent.replace(/Anchor\s*$/, "").trim()}\n\n${content.join("\n\n")}`;
+				const htmlToCopy = content.innerHTML;
+				const textToCopy = content.innerText.replace(/Anchor\s*$/, "").trim();
 
 				try {
-					if (!navigator.clipboard?.writeText) {
+					if (!navigator.clipboard?.write || !window.ClipboardItem) {
 						throw new Error("Clipboard API unavailable");
 					}
-					await navigator.clipboard.writeText(textToCopy);
+					await navigator.clipboard.write([
+						new ClipboardItem({
+							"text/html": new Blob([htmlToCopy], { type: "text/html" }),
+							"text/plain": new Blob([textToCopy], { type: "text/plain" }),
+						}),
+					]);
 				} catch {
-					const textArea = document.createElement("textarea");
-					textArea.value = textToCopy;
-					textArea.setAttribute("readonly", "");
-					textArea.style.position = "fixed";
-					textArea.style.opacity = "0";
-					document.body.appendChild(textArea);
-					textArea.select();
+					const copyContainer = document.createElement("div");
+					copyContainer.innerHTML = htmlToCopy;
+					copyContainer.style.position = "fixed";
+					copyContainer.style.opacity = "0";
+					document.body.appendChild(copyContainer);
+
+					const selection = window.getSelection();
+					const range = document.createRange();
+					range.selectNodeContents(copyContainer);
+					selection?.removeAllRanges();
+					selection?.addRange(range);
 					document.execCommand("copy");
-					textArea.remove();
+					selection?.removeAllRanges();
+					copyContainer.remove();
 				}
 
 				copyStatementButton.textContent = "Teatis kopeeritud";
