@@ -378,14 +378,38 @@ toc_sticky: true
 		}
 	};
 
+	const emptyStatementPlanCells = () => {
+		const statementHeading = Array.from(document.querySelectorAll(".markdown-body h1, main h1, .main-content h1"))
+			.find((heading) => heading.textContent.replace(/Anchor\s*$/, "").trim() === "Eeltäidetud teatis");
+		let statementTable = null;
+		let nextElement = statementHeading?.nextElementSibling;
+
+		while (nextElement && nextElement.tagName !== "H1") {
+			if (nextElement.tagName === "TABLE") {
+				statementTable = nextElement;
+				break;
+			}
+			nextElement = nextElement.nextElementSibling;
+		}
+
+		statementTable?.querySelectorAll("tbody tr").forEach((row) => {
+			const planCell = row.cells[5];
+			if (planCell) {
+				planCell.textContent = "";
+			}
+		});
+	};
+
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", () => {
 			addAccessibleLinkLabels();
 			setupAuditFindingToggles();
+			emptyStatementPlanCells();
 		});
 	} else {
 		addAccessibleLinkLabels();
 		setupAuditFindingToggles();
+		emptyStatementPlanCells();
 	}
 </script>
 
@@ -408,11 +432,11 @@ toc_sticky: true
 
 Auditi käigus kontrolliti veebilehe [test.ee](https://www.test.ee/) 8 alamlehte standardi EN 301 549 V3.2.1 ja WCAG nõuete alusel. Tuvastati **20 nõuet, mille puhul esines vähemalt üks mittevastavus**.
 
-Tööde järjekord peaks olema järgmine: esmalt kõrvaldada põhifunktsioone takistavad kriitilised vead, seejärel parandada kontrastsuse ja fookuse probleemid ning lõpuks viimistleda sisu, tõlked ja teatis. Allolev nimekiri on mõeldud otse tööülesannete jagamiseks.
+Tööde järjekord peaks olema järgmine: esmalt kõrvaldada põhifunktsioone takistavad kriitilised vead, seejärel parandada kontrastsuse ja fookuse probleemid ning lõpuks viimistleda sisu, tõlked ja teatis.
 
 **Kui dokumendis pole alamlehti või WCAG nõudeid välja toodud, siis nende osas vigu ei tuvastatud.**
 
-## TODO tööde jagamiseks
+## Vigade ülevaade
 
 Iga ülesande lõpetamisel tuleks kontrollida nii hiire, klaviatuuri kui ka ekraanilugejaga ning märkida tulemus tööde nimekirjas. Aruande leiuplokid sisaldavad konkreetseid standardiviiteid, mõjutatud alamlehti ja CSS-valijaid, mida saab kasutada arenduspiletite koostamisel.
 
