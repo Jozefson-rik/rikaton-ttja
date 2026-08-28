@@ -957,7 +957,7 @@ Klaviatuuri fookus liigub ootamatult jalusesse, mis muudab navigeerimise ebaloog
 
 # Eeltäidetud teatis
 
-<button class="copy-statement-button" type="button" id="copy-statement-button">Kopeeri teatis</button>
+<button class="copy-statement-button" type="button" id="copy-statement-button">Kopeeri teatise .html</button>
 
 **Ligipääsetavuse teatis**
 
